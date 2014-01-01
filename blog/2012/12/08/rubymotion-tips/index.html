@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+<meta content='IE=edge;chrome=1' http-equiv='X-UA-Compatible'>
+<link href="../../../../../stylesheets/application-dfa252fc.css" media="screen" rel="stylesheet" type="text/css" />
+<script async='async' charset='utf-8' src='http://b.st-hatena.com/js/bookmark_button.js' type='text/javascript'></script>
+<script>
+  !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+</script>
+<script async charset='utf-8' src='//platform.twitter.com/widgets.js'></script>
+<title>
+satococoa's blog - RubyMotion の小ワザ
+</title>
+<link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/blog/feed.xml" />
+</head>
+<body>
+<div id='fb-root'></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1&appId=252361011596763";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+<div class='global_header'>
+<h1>
+<a href="/">satococoa's blog</a>
+</h1>
+<div class='self_links'>
+<a href="https://facebook.com/satoshi.ebisawa"><i class='fa fa-facebook'></i>
+</a>
+<a href="https://twitter.com/satococoa"><i class='fa fa-twitter'></i>
+</a>
+<a href="https://github.com/satococoa"><i class='fa fa-github'></i>
+</a>
+</div>
+</div>
+
+<nav class='topic_path'>
+<ul>
+<li>
+<a href="/">Top</a>
+</li>
+<li>RubyMotion の小ワザ</li>
+</ul>
+</nav>
+<div id='main' role='main'>
+<div class='article'>
+<div class='main'>
+<h2>
+<a href="/blog/2012/12/08/rubymotion-tips/">RubyMotion の小ワザ</a>
+</h2>
+<p>この記事は <a href="http://www.adventar.org/calendars/18">RubyMotion Advent Calendar 2012</a> の8日目の記事です。</p>
+
+<p>実際に RubyMotion を使って開発する上で、知っておくとちょっと便利かもしれない小ワザを並べてみます。</p>
+
+<h2>複数の iOS 機器をつないでいるときにデプロイする機器を指定する</h2>
+
+<p>仕事で iOS アプリの開発をしていると、Mac に複数の機器をつないでいることもしばしばあります。そういうときに <code>rake device</code> する際、<code>id</code>パラメータを指定するとでプロイする機器を選択することができます。</p>
+<pre class="highlight text">$ rake device id=hogehoge
+</pre>
+<p>この際に使うidというのは Identifier のことで Xcode の Organizer で調べることができます。</p>
+
+<p><img alt="Xcode organizer" src="../../../../../images/201212/identifier-in-organizer-bef65f4b.png" /></p>
+
+<h2>設定を yaml ファイルにまとめる</h2>
+
+<p>複数のアプリの開発をしていると、毎回 Rakefile に testflight の token を書くのは面倒ですし、Rakefile がごちゃっとしますよね。</p>
+
+<p>僕は yaml にそういった設定情報を書くようにしています。</p>
+
+<p>yaml ファイルはこんな感じ。</p>
+<pre class="highlight yaml"><span class="s">testflight</span><span class="p">:</span>
+  <span class="s">api_token</span><span class="p">:</span> <span class="s">API_TOKEN</span>
+  <span class="s">team_token</span><span class="p">:</span> <span class="s">TEAM_TOKEN</span>
+  <span class="s">distribution_lists</span><span class="p">:</span>
+    <span class="p">-</span> <span class="s">DIST_LISTS</span>
+
+<span class="s">identifier</span><span class="p">:</span> <span class="s">com.example.coolapp</span>
+
+<span class="s">development</span><span class="p">:</span>
+  <span class="s">certificate</span><span class="p">:</span> <span class="s1">&#39;</span><span class="s">iPhone</span><span class="nv"> </span><span class="s">Developer:</span><span class="nv"> </span><span class="s">foo</span><span class="nv"> </span><span class="s">(bar)&#39;</span>
+  <span class="s">provisioning</span><span class="p">:</span> <span class="s1">&#39;</span><span class="s">/path/to/foo.mobileprovision&#39;</span>
+
+<span class="s">adhoc</span><span class="p">:</span>
+  <span class="s">certificate</span><span class="p">:</span> <span class="s1">&#39;</span><span class="s">iPhone</span><span class="nv"> </span><span class="s">Distribution:</span><span class="nv"> </span><span class="s">foo&#39;</span>
+  <span class="s">provisioning</span><span class="p">:</span> <span class="s1">&#39;</span><span class="s">/path/to/foo.mobileprovision&#39;</span>
+
+<span class="s">release</span><span class="p">:</span>
+  <span class="s">certificate</span><span class="p">:</span> <span class="s1">&#39;</span><span class="s">iPhone</span><span class="nv"> </span><span class="s">Distribution:</span><span class="nv"> </span><span class="s">foo&#39;</span>
+  <span class="s">provisioning</span><span class="p">:</span> <span class="s1">&#39;</span><span class="s">/path/to/foo.mobileprovision&#39;</span>
+</pre>
+<p>Rakefile 内でこんな風に使います。</p>
+<pre class="highlight ruby"><span class="nb">require</span> <span class="s1">&#39;yaml&#39;</span>
+<span class="n">conf_file</span> <span class="o">=</span> <span class="s1">&#39;./config.yml&#39;</span>
+<span class="k">if</span> <span class="no">File</span><span class="nf">.exists?</span><span class="p">(</span><span class="n">conf_file</span><span class="p">)</span>
+  <span class="n">config</span> <span class="o">=</span> <span class="no">YAML</span><span class="o">::</span><span class="n">load_file</span><span class="p">(</span><span class="n">conf_file</span><span class="p">)</span>
+  <span class="n">app</span><span class="nf">.testflight.sdk</span>        <span class="o">=</span> <span class="s1">&#39;vendor/TestFlightSDK&#39;</span>
+  <span class="n">app</span><span class="nf">.testflight.api_token</span>  <span class="o">=</span> <span class="n">config</span><span class="o">[</span><span class="s1">&#39;testflight&#39;</span><span class="o">][</span><span class="s1">&#39;api_token&#39;</span><span class="o">]</span>
+  <span class="n">app</span><span class="nf">.testflight.team_token</span> <span class="o">=</span> <span class="n">config</span><span class="o">[</span><span class="s1">&#39;testflight&#39;</span><span class="o">][</span><span class="s1">&#39;team_token&#39;</span><span class="o">]</span>
+  <span class="n">app</span><span class="nf">.testflight.notify</span>     <span class="o">=</span> <span class="kp">true</span>
+  <span class="n">app</span><span class="nf">.testflight.distribution_lists</span> <span class="o">=</span> <span class="n">config</span><span class="o">[</span><span class="s1">&#39;testflight&#39;</span><span class="o">][</span><span class="s1">&#39;distribution_lists&#39;</span><span class="o">]</span>
+  <span class="n">app</span><span class="nf">.identifier</span> <span class="o">=</span> <span class="n">config</span><span class="o">[</span><span class="s1">&#39;identifier&#39;</span><span class="o">]</span>
+  <span class="n">app</span><span class="nf">.info_plist</span><span class="o">[</span><span class="s1">&#39;CFBundleURLTypes&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="o">[</span>
+    <span class="p">{</span> <span class="s1">&#39;CFBundleURLName&#39;</span> <span class="o">=&gt;</span> <span class="n">config</span><span class="o">[</span><span class="s1">&#39;identifier&#39;</span><span class="o">]</span><span class="p">,</span>
+      <span class="s1">&#39;CFBundleURLSchemes&#39;</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="s1">&#39;coolapp&#39;</span><span class="o">]</span> <span class="p">}</span>
+  <span class="o">]</span>
+
+  <span class="n">env</span> <span class="o">=</span> <span class="no">ENV</span><span class="o">[</span><span class="s1">&#39;ENV&#39;</span><span class="o">]</span> <span class="o">||</span> <span class="s1">&#39;development&#39;</span>
+  <span class="n">app</span><span class="nf">.codesign_certificate</span> <span class="o">=</span> <span class="n">config</span><span class="o">[</span><span class="n">env</span><span class="o">][</span><span class="s1">&#39;certificate&#39;</span><span class="o">]</span>
+  <span class="n">app</span><span class="nf">.provisioning_profile</span> <span class="o">=</span> <span class="n">config</span><span class="o">[</span><span class="n">env</span><span class="o">][</span><span class="s1">&#39;provisioning&#39;</span><span class="o">]</span>
+<span class="k">end</span>
+</pre>
+<p>testflight で配布するときはこんな感じ。</p>
+<pre class="highlight text">$ rake testflight notes=&quot;hogehoge&quot; mode=release ENV=adhoc
+</pre>
+<h2>RubyMotion のバージョンを戻す</h2>
+
+<p>RubyMotion をアップデートして何かおかしなことが起きたら、以下のコマンドで任意のバージョンに戻すことができます。</p>
+<pre class="highlight text">$ motion update --force-version=1.15
+</pre>
+<h2>tap を使って処理をすっきりまとめて書く</h2>
+
+<p><code>Object#tap</code> を使うと、以下のように書くことができます。初期化の固まりを視覚的に認識しやすいので僕は気に入っています。</p>
+<pre class="highlight ruby"><span class="c1"># 普通に書くと...</span>
+<span class="n">label</span> <span class="o">=</span> <span class="no">UILabel</span><span class="nf">.new</span>
+<span class="n">label</span><span class="nf">.frame</span> <span class="o">=</span> <span class="o">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="o">]</span><span class="p">,</span> <span class="o">[</span><span class="mi">320</span><span class="p">,</span> <span class="mi">10</span><span class="o">]]</span>
+<span class="n">label</span><span class="nf">.lineBreakMode</span> <span class="o">=</span> <span class="no">UILineBreakModeWordWrap</span>
+<span class="n">label</span><span class="nf">.numberOfLines</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">label</span><span class="nf">.font</span> <span class="o">=</span> <span class="no">UIFont</span><span class="nf">.systemFontOfSize</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">label</span><span class="nf">.text</span> <span class="o">=</span> <span class="n">text</span>
+<span class="n">label</span><span class="nf">.backgroundColor</span> <span class="o">=</span> <span class="no">UIColor</span><span class="nf">.lightGrayColor</span>
+<span class="n">label</span><span class="nf">.alpha</span> <span class="o">=</span> <span class="mi">0</span><span class="o">.</span><span class="mi">8</span>
+<span class="n">label</span><span class="nf">.sizeToFit</span>
+
+
+<span class="c1"># tap を使ってまとまりを持たせる</span>
+<span class="n">label</span> <span class="o">=</span> <span class="no">UILabel</span><span class="nf">.new.tap</span> <span class="k">do</span> <span class="o">|</span><span class="n">l</span><span class="o">|</span>
+  <span class="n">l</span><span class="nf">.frame</span> <span class="o">=</span> <span class="o">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="o">]</span><span class="p">,</span> <span class="o">[</span><span class="mi">320</span><span class="p">,</span> <span class="mi">10</span><span class="o">]]</span>
+  <span class="n">l</span><span class="nf">.lineBreakMode</span> <span class="o">=</span> <span class="no">UILineBreakModeWordWrap</span>
+  <span class="n">l</span><span class="nf">.numberOfLines</span> <span class="o">=</span> <span class="mi">0</span>
+  <span class="n">l</span><span class="nf">.font</span> <span class="o">=</span> <span class="no">UIFont</span><span class="nf">.systemFontOfSize</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+  <span class="n">l</span><span class="nf">.text</span> <span class="o">=</span> <span class="n">text</span>
+  <span class="n">l</span><span class="nf">.backgroundColor</span> <span class="o">=</span> <span class="no">UIColor</span><span class="nf">.lightGrayColor</span>
+  <span class="n">l</span><span class="nf">.alpha</span> <span class="o">=</span> <span class="mi">0</span><span class="o">.</span><span class="mi">8</span>
+  <span class="n">l</span><span class="nf">.sizeToFit</span>
+<span class="k">end</span>
+</pre>
+<h2>weak_frameworks</h2>
+
+<p>例えば deployment_target を 5.0 以上にしている場合でも、iOS 6.0 で起動中は Social フレームワークを使いたいというケース、あると思います。
+ただし、普通に <code>app.frameworks</code> に <code>Social</code> を足してしまうと iOS 6.0 以上にしか存在しないフレームワークなのでビルドが通らなくなってしまいます。</p>
+
+<p>そういうときは <code>app.weak_framework</code> を使えば、必要になったときにframeworkをロードするようになります。</p>
+
+<p>もちろん、iOS 5.0 で Social フレームワークが使えるわけではないので以下のように切り分けは必要です。</p>
+<pre class="highlight ruby"><span class="k">def </span><span class="nf">can_open_tweet?</span>
+  <span class="k">if</span> <span class="n">defined?</span><span class="p">(</span><span class="no">SLComposeViewController</span><span class="p">)</span>
+    <span class="no">SLComposeViewController</span><span class="nf">.isAvailableForServiceType</span><span class="p">(</span><span class="no">SLServiceTypeTwitter</span><span class="p">)</span>
+  <span class="k">else</span>
+    <span class="no">TWTweetComposeViewController</span><span class="nf">.canSendTweet</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre>
+<p>以下のコマンドで使用するシミュレータの OS のバージョンを指定して起動することができます。</p>
+<pre class="highlight text">$ rake target=6.0
+</pre>
+<h2>bundler を使う</h2>
+
+<p>RubyMotion 用の gem も BubbleWrap をはじめとしてたくさん出てきました。rails を使った開発のように Bundler を使用すると依存関係を管理することができ、複数人での開発などがしやすくなります。</p>
+<pre class="highlight text">$ gem install bundler
+$ bundle init # これで Gemfile が生成されるので必要な Gem を中に書く
+$ bundle install --path vendor/bundle # gem をインストールするパスを指定
+</pre>
+<p>Gemfile はこんな感じになります。</p>
+<pre class="highlight ruby"><span class="n">source</span> <span class="s2">&quot;https://rubygems.org&quot;</span>
+
+<span class="n">gem</span> <span class="s1">&#39;bubble-wrap&#39;</span>
+<span class="n">gem</span> <span class="s1">&#39;motion-cocoapods&#39;</span>
+<span class="n">gem</span> <span class="s1">&#39;motion-testflight&#39;</span>
+</pre>
+<p>Bundler でインストールした gem を使うには Rakefile の冒頭の以下のようにします。</p>
+<pre class="highlight ruby"><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="vg">$:</span><span class="nf">.unshift</span><span class="p">(</span><span class="s2">&quot;/Library/RubyMotion/lib&quot;</span><span class="p">)</span>
+<span class="nb">require</span> <span class="s1">&#39;motion/project&#39;</span>
+<span class="nb">require</span> <span class="s1">&#39;bundler/setup&#39;</span>
+<span class="no">Bundler</span><span class="nf">.require</span> <span class="ss">:default</span>
+</pre>
+<p>一点注意があります。bundler でインストールされた rake とビルド時に使用する rake のバージョンが異なる場合、rake 実行時に以下のようなメッセージが表示されます。</p>
+<pre class="highlight text">$ rake
+rake aborted!
+You have already activated rake 10.0.2, but your Gemfile requires rake 0.9.5. Using bundle exec may solve this.
+/path/to/Rakefile:4:in `&lt;top (required)&gt;&#39;
+(See full trace by running task with --trace)
+</pre>
+<p>bundle exec を使うと、Bundler でインストールされた rake を使うことができます。</p>
+<pre class="highlight text">$ bundle exec rake
+</pre>
+<h2>mode が development か release かを判断する</h2>
+
+<p>RubyMotion のプロジェクトのビルドには development と release の2つのモードがあります。</p>
+
+<p>development は開発用にシミュレータや開発機に転送するのに使い、release は AppStore への提出用です。</p>
+
+<p>以下のようにしてモードを指定してビルドすることができます。</p>
+<pre class="highlight text">$ rake mode=development
+# または
+$ rake mode=release
+</pre>
+<p>現時点での両者の違いは、release モードにすると実行ファイルの最適化が行われることです。それによって、そのプロセスが無い分 development モードのビルドは早くなり、逆に実行時の速度が若干損なわれるそうです。（ベンチマークとっていないのでちょっとその差がどのくらいなのか、までは比べていませんが...）</p>
+
+<p>さて、モードによって処理を分けたいところも存在すると思います。development モードのときだけログを出したりとか。</p>
+
+<p>Rakefile の中では <code>app.development</code>, <code>app.release</code> というメソッドが使えます。それぞれブロックの中身が対応するモードのときにのみ実行されます。</p>
+<pre class="highlight ruby"><span class="no">Motion</span><span class="o">::</span><span class="no">Project</span><span class="o">::</span><span class="no">App</span><span class="nf">.setup</span> <span class="k">do</span> <span class="o">|</span><span class="n">app</span><span class="o">|</span>
+  <span class="c1"># ...</span>
+  <span class="n">app</span><span class="nf">.development</span> <span class="k">do</span>
+    <span class="c1"># This entitlement is required during development but must not be used for release.</span>
+    <span class="n">app</span><span class="nf">.entitlements</span><span class="o">[</span><span class="s1">&#39;get-task-allow&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="kp">true</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre>
+<p>Rakefile ではなく実行コードの方では <code>RUBYMOTION_ENV</code> という定数が使えます。</p>
+
+<h2>まとめ</h2>
+
+<p>思いついたものをざっと並べただけでした。既に開発をバリバリやっている方にはご存知の物も多いかもしれませんが、参考になれば幸いです。</p>
+
+</div>
+<div class='meta'>
+<div class='published_at'>
+2012-12-08
+19:30
+</div>
+<ul class='tags'>
+<li>
+<a href="/blog/tags/rubymotion/">rubymotion</a>
+</li>
+</ul>
+<ul class='social'>
+<li class='hatena'>
+<a class='hatena-bookmark-button' data-hatena-bookmark-lang='ja' data-hatena-bookmark-layout='standard-balloon' data-hatena-bookmark-title='タイトル' href='http://b.hatena.ne.jp/entry/http://satococoa.github.io/blog/2012/12/08/rubymotion-tips/' title='このエントリーをはてなブックマークに追加'>
+<img alt='このエントリーをはてなブックマークに追加' height='20' src='http://b.st-hatena.com/images/entry-button/button-only@2x.png' style='border: none;' width='20'>
+</a>
+</li>
+<li class='twitter'>
+<a class='twitter-share-button' data-lang='en' data-url='http://satococoa.github.io/blog/2012/12/08/rubymotion-tips/' href='https://twitter.com/share'>Tweet</a>
+</li>
+<li class='facebook'>
+<div class='fb-like' data-action='like' data-href='http://satococoa.github.io/blog/2012/12/08/rubymotion-tips/' data-layout='button_count' data-share='false' data-show-faces='false'></div>
+</li>
+</ul>
+</div>
+</div>
+
+</div>
+<div class='global_footer'>
+<div class='recent'>
+<h2>Recent Articles</h2>
+<ul>
+<li>
+<a href="/blog/2013/04/20/rubymotion-conference-number-inspect-2013/">RubyMotion Conference #inspect 2013</a>
+</li>
+<li>
+<a href="/blog/2013/03/03/rails-girls-tokyo-2nd/">Rails Girls Tokyo 2nd に参加しました</a>
+</li>
+<li>
+<a href="/blog/2013/02/25/rubyfriendscamera/">RubyFriendsCamera has been released!</a>
+</li>
+<li>
+<a href="/blog/2013/02/20/debugging-rubymotion-using-nszombieenabled/">RubyMotion のデバッグで NSZombieEnabled を使う</a>
+</li>
+<li>
+<a href="/blog/2013/02/18/install-dashdoc/">DashDoc を入れてみた</a>
+</li>
+</ul>
+</div>
+<div class='tags'>
+<h2>Tags</h2>
+<ul>
+<li>
+<a href="/blog/tags/日記/">日記</a>
+(2)
+</li>
+<li>
+<a href="/blog/tags/community/">community</a>
+(2)
+</li>
+<li>
+<a href="/blog/tags/event/">event</a>
+(12)
+</li>
+<li>
+<a href="/blog/tags/rubymotion/">rubymotion</a>
+(13)
+</li>
+<li>
+<a href="/blog/tags/rails/">rails</a>
+(3)
+</li>
+<li>
+<a href="/blog/tags/linux/">linux</a>
+(2)
+</li>
+<li>
+<a href="/blog/tags/design/">design</a>
+(1)
+</li>
+<li>
+<a href="/blog/tags/ruby/">ruby</a>
+(4)
+</li>
+<li>
+<a href="/blog/tags/mysql/">mysql</a>
+(1)
+</li>
+<li>
+<a href="/blog/tags/sublimetext/">sublimetext</a>
+(1)
+</li>
+</ul>
+</div>
+<div class='by_year'>
+<h2>By Year</h2>
+<ul>
+<li>
+<a href="/blog/2013/">2013</a>
+(11)
+</li>
+<li>
+<a href="/blog/2012/">2012</a>
+(18)
+</li>
+</ul>
+</div>
+</div>
+
+</body>
+</html>

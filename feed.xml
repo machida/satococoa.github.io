@@ -1,0 +1,713 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Blog Name</title>
+  <subtitle>Blog subtitle</subtitle>
+  <id>http://blog.url.com/blog</id>
+  <link href="http://blog.url.com/blog"/>
+  <link href="http://blog.url.com/feed.xml" rel="self"/>
+  <updated>2013-04-20T05:00:00Z</updated>
+  <author>
+    <name>Blog Author</name>
+  </author>
+  <entry>
+    <title>RubyMotion Conference #inspect 2013</title>
+    <link rel="alternate" href="http://blog.url.com/blog/2013/04/20/rubymotion-conference-number-inspect-2013/"/>
+    <id>http://blog.url.com/blog/2013/04/20/rubymotion-conference-number-inspect-2013/</id>
+    <published>2013-04-20T05:00:00Z</published>
+    <updated>2014-01-01T19:25:22+09:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;3/28, 29 にベルギーのブリュッセルで開催された &lt;a href="http://www.rubymotion.com/conference/"&gt;RubyMotion Conference #inspect 2013&lt;/a&gt; に参加しました。&lt;/p&gt;
+
+&lt;p&gt;英語力にだいぶ不安がある中、頑張って聴き取ってきた内容をメモしたいと思います。&lt;/p&gt;
+
+&lt;h3&gt;1 日目&lt;/h3&gt;
+
+&lt;h4&gt;A Brave New World: Learning iOS for the Ruby Refugee - Nick Quaranto さん&lt;/h4&gt;
+
+&lt;p&gt;37signals で働く Nick さんがいかにして RubyMotion で Basecamp for iPhone を作って、どういうことを感じたのか、というお話でした。&lt;/p&gt;
+
+&lt;p&gt;Nick さんにとっては Objective-C で開発するということは Xcode というツールを強制されることが苦痛であり、自分の好きなツールを使って自由に開発ができる RubyMotion 無くして Basecamp for iPhone は作れなかっただろう、と話していました。&lt;br&gt;
+Interface Builder を見たときに、まるで Visual Basic を思い出すようだったというところで笑いを取っていました。&lt;/p&gt;
+
+&lt;p&gt;また、有用な gem や community のリソースの紹介もされました。&lt;/p&gt;
+
+&lt;h5&gt;Community&lt;/h5&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://groups.google.com/forum/?fromgroups#!forum/rubymotion"&gt;Google Group&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/rubymotion"&gt;https://github.com/rubymotion&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.rubymotion.com/developer-center/api/"&gt;http://www.rubymotion.com/developer-center/api/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/HipByte/RubyMotion-Samples"&gt;https://github.com/HipByte/RubyMotion-Samples&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5&gt;Gem&lt;/h5&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://bubblewrap.io"&gt;bubble-wrap&lt;/a&gt;, ほとんど全てのプロジェクトで使っている Cocoa Touch の wrapper&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/qrush/motion-settings-bundle"&gt;motion-settings-bundle&lt;/a&gt;, 設定 app 用の bundle を作る gem&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/qrush/motion-layout"&gt;motion-layout&lt;/a&gt;, iOS 6.0 から使える auto-layout の gem&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://cocoapods.org"&gt;CocoaPods&lt;/a&gt; (motion-cocoapods)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ちなみに質疑応答で「テストは書いているか？」という質問がされ、Basecamp アプリはテストを書いていないそうです。&lt;br&gt;
+その後、「テストを書いていますか？」 -&gt; 「書いてないです」というやりとりはほぼ全部の発表後に様式美的に繰り返されることになります。 (1日目後半からは「ノベルティの T シャツはあるのか？」という質問も決まり文句として繰り返されて、笑いを誘っていました。)&lt;/p&gt;
+
+&lt;p&gt;RubyMotion でテストを書くときに参考にすべき良いアプリとして、&lt;a href="https://github.com/tkadauke/TinyMon"&gt;TinyMon&lt;/a&gt; というアプリが挙げられました。&lt;/p&gt;
+
+&lt;h4&gt;Behaviour Driven Motion using Calabash - Karl Krukow さん&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href="http://calaba.sh"&gt;Carabash&lt;/a&gt; というテスティングフレームワークのお話とデモでした。&lt;/p&gt;
+
+&lt;p&gt;会場にその場で挙手を求めてアンケートをとったところ、約 30% の人が RubyMotion のプロジェクトではユニットテストを書いていて、Acceptance Test を書いている人はたったの 2 人でした。&lt;/p&gt;
+
+&lt;p&gt;Carabash は Cucumber を利用して受け入れテストを記述するフレームワークで、マルチプラットフォームであることも特徴です。&lt;/p&gt;
+
+&lt;p&gt;また、client-server の構成を取っていて、リモートでテストを実行することも可能です。実際にリモートの実機で動作している様子も映像で見せてもらいました。&lt;/p&gt;
+
+&lt;p&gt;デモで動かしていたテストのリポジトリは以下です。(RubyMotion-Samples にある Beer アプリに対して受け入れテストを実行しました。)
+&lt;a href="https://github.com/krukow/motion-calabash-inspect2013"&gt;https://github.com/krukow/motion-calabash-inspect2013&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4&gt;Controlling the Real World with RubyMotion - Rich Kilmer さん&lt;/h4&gt;
+
+&lt;p&gt;bluetooth のお話でした。&lt;/p&gt;
+
+&lt;p&gt;bluetooth の出始めの頃のお話から最近の bluetooth4 の仕様の話という歴史をおさらいするところから始まって、Apple 公式のドキュメントには全く記載のない (でもなぜかサンプルコードは配布されている) bluetooth を使って iPhone をサーバとして周囲の機器をスキャンし、その値を受け取ることもできるそうです。&lt;/p&gt;
+
+&lt;p&gt;これも実際にデモをされていました。&lt;/p&gt;
+
+&lt;h4&gt;Elevate your Intent - Matt Green さん&lt;/h4&gt;
+
+&lt;p&gt;ソフトウェアの設計のお話でした。(RubyMotion に特化した訳ではなく、一般的な概念)&lt;/p&gt;
+
+&lt;p&gt;責任の所在をドメインに応じて適宜分散し、小さくてシンプルなクラスを定義することで意図を明確に伝えるソースコードが書けるというお話でした。&lt;/p&gt;
+
+&lt;p&gt;Dependencies (依存関係) は複雑さを生み、バグを生み出すので、それをドメインに合うように分離することが大事と説いていました。&lt;/p&gt;
+
+&lt;p&gt;結局、依存は厄介なものであって、特に MVC の境界 (サービス層にあたるようなもの) はその依存関係が発生してしまうのでしいですが、それをうまく切り分けてシンプルにし、ドメインに基づいた名前を与え、エラー時には派手にエラーを挙げる (fail loudly) というのがうまく設計するポイントだと話していました。&lt;/p&gt;
+
+&lt;p&gt;また、それを支援するライブラリとして &lt;a href="https://github.com/mattgreen/elevate"&gt;Elevate&lt;/a&gt; という gem を作って公開されました。&lt;/p&gt;
+
+&lt;p&gt;スライド: &lt;a href="https://speakerdeck.com/mattgreen/elevate-your-intent"&gt;Elevate Your Intent&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4&gt;Accessibility and RubyMotion - Austin Seraphin&lt;/h4&gt;
+
+&lt;p&gt;アクセシビリティについての話でした。&lt;/p&gt;
+
+&lt;p&gt;生まれつきの全盲である Austin さんの生活がいかにして iPhone の登場によって快適になり、さらに RubyMotion のおかげでいかにソフトウェア開発が容易になったか、というお話をまずはされました。&lt;/p&gt;
+
+&lt;p&gt;『カメラを使って色を認識し、その色を音声で教えてくれるアプリを使ってみたけど、何にかざしても &amp;quot;Black!&amp;quot; としか認識されず、最初はアプリが壊れているのかと思ったら、実は夜で電気をつけていなかったために &amp;quot;Black&amp;quot; と認識されていたと気づき、電気をつけた』というエピソードが印象的でした。&lt;/p&gt;
+
+&lt;p&gt;Xcode の Interface Builder は全く全盲者にとってはアクセシビリティに乏しく、とても辛いものだそうです。しかし、自分の好きなツールを自由に選択でき、コードで開発ができる RubyMotion はそんな方にも可能性を与えるものとして素晴らしいとのことでした。&lt;/p&gt;
+
+&lt;p&gt;その話の後は、実際に開発者はどんな所に気をつけて開発すればいいのか、というところを具体的にレクチャーして頂きました。&lt;/p&gt;
+
+&lt;p&gt;スライド: &lt;a href="http://www.slideshare.net/AdrianoMartino/ruby-motion-andiosaccessibility"&gt;RUBY MOTION &amp;amp; ACCESSIBILITY&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4&gt;Core Data For The Curious Rubyist - Jonathan Penn さん&lt;/h4&gt;
+
+&lt;p&gt;資料 (PDF): &lt;a href="http://cocoamanifest.net/features/2013-03-core-data-in-motion.pdf"&gt;Core Data For The Curious Rubyist&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Core Data についてのお話でした。&lt;/p&gt;
+
+&lt;p&gt;「Core Data は SQLite の ORM ではなくオブジェクトグラフである」という話から始まり、Core Data を使う上で理解する必要のある以下の 5 つの概念についての説明がありました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Context (NSManagedObjectContext)&lt;/li&gt;
+&lt;li&gt;Object (NSManagedObject)&lt;/li&gt;
+&lt;li&gt;Model (NSManagedObejctModel)&lt;/li&gt;
+&lt;li&gt;StoreCoordinator (NSPersistentStoreCoordinator)&lt;/li&gt;
+&lt;li&gt;FetchedResultsController (NSFetchedResultsController)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;特に非同期処理周りはややこしそうですね。。。iOS 5 以上からは &lt;code&gt;parentContext&lt;/code&gt; というプロパティができてやりやすくはなったらしいですが。&lt;/p&gt;
+
+&lt;p&gt;Core Data のモデルファイルをコードから生成できる &lt;a href="http://fousa.github.io/motion_migrate/"&gt;Motion Migrate&lt;/a&gt; という gem も紹介されました。&lt;/p&gt;
+
+&lt;p&gt;あとは RubyMotion 用の Core Data のラッパーとして以下の2つの gem が挙げられました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/alloy/MotionData"&gt;MotionData&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/awdogsgo2heaven/superbox"&gt;superbox&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;The Life and Times of an Object - Josh Ballanco さん&lt;/h4&gt;
+
+&lt;p&gt;gdb を使った RubyMotion のデバッグの仕方の紹介とデモでした。&lt;/p&gt;
+
+&lt;p&gt;RubyMotion では以下のコマンドで dbg が起動します。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;$ rake debug=1&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;また、gdb 上で bt(backtrace), b(breakpoint), p(print), pro(print-ruby-object), x(x/4w と打っていた) などを使って実際のデバッグ風景を見せてくれました。&lt;/p&gt;
+
+&lt;p&gt;僕が一番驚いたのは、&lt;code&gt;p (char *)class_getName(&amp;lt;address&amp;gt;)&lt;/code&gt; のようにして Objective-C Runtime の関数が呼べることや、&lt;code&gt;(char *)[[$1 keys] inspect]&lt;/code&gt; のようにして Ruby のメソッドも呼べてしまうことでした。Ruby 処理系が Objective-C Runtime 上で実装されているおかげなんですね。&lt;/p&gt;
+
+&lt;p&gt;最後に &lt;code&gt;MallocStackLoggingNoCompat=YES rake debug=1&lt;/code&gt; でデバッガを起動した後で &lt;code&gt;malloc_history&lt;/code&gt; を使ってメモリの確保 / 解放の履歴を見る方法の説明がありました。&lt;/p&gt;
+
+&lt;h4&gt;Concurrency in RubyMotion: Use the Multicore Luke! - Mateus Armando さん&lt;/h4&gt;
+
+&lt;p&gt;GCD, NSOperationQueue を使った非同期処理についてのお話でした。&lt;/p&gt;
+
+&lt;p&gt;GCD, NSOperationQueue の使い方についての全般的な説明、GCD / NSOperationQueue の比較もありました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://seanlilmateus.github.io"&gt;Mateus さんのブログ&lt;/a&gt;には他にも GCD 関連のわかりやすい記事が掲載されています。&lt;/p&gt;
+
+&lt;p&gt;スライド: &lt;a href="https://speakerdeck.com/seanlilmateus/concurrency-patterns-in-rubymotion"&gt;CONCURRENCY PATTERNS IN RUBYMOTION&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4&gt;Get More From RubyMotion with RubyMine - Dennis Ushakov さん&lt;/h4&gt;
+
+&lt;p&gt;RubyMine での開発、デバッグなどのデモでした。&lt;/p&gt;
+
+&lt;p&gt;デバッグ用途だけで RubyMine を使うというのも割とありな気がします。&lt;/p&gt;
+
+&lt;h4&gt;Crafting iOS Dev Tools in Redcar - Delisa Mason さん&lt;/h4&gt;
+
+&lt;p&gt;Ruby で実装された &lt;a href="http://redcareditor.com"&gt;Redcar&lt;/a&gt; というエディタの紹介でした。&lt;/p&gt;
+
+&lt;p&gt;実際に HTML でプラグインを書くライブコーディングによるデモと、エディタ上でドキュメントを見られたり、デバッグができると言った特徴の説明がありました。&lt;/p&gt;
+
+&lt;p&gt;スライド: &lt;a href="https://speakerdeck.com/kattrali/crafting-ios-dev-tools-in-redcar-the-ruby-editor"&gt;Crafting iOS Dev Tools in Redcar, the Ruby Editor&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;以上で 1 日目が終わり、その日の夜は @watson1978 さんとムール貝食べてきました。&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="ムール貝" src="../../../../../images/201304/dinner-4db74c07.jpg" /&gt;&lt;/p&gt;
+
+&lt;h3&gt;2 日目&lt;/h3&gt;
+
+&lt;h4&gt;NSRevolution: How Ruby hackers built the new Objective-C Open Source community - Mattt Thompson さん&lt;/h4&gt;
+
+&lt;p&gt;Ruby, Objective-C 双方の歴史などを振り返るところから話が始まりました。&lt;/p&gt;
+
+&lt;p&gt;Ruby は Smalltalk, perl, eiffel, lisp から強く影響を受けていて、ObjC は Smalltalk, C から影響を (C は影響というよりは、親みたいなものですが) 受けていて、双方ともメッセージパッシングについては Smalltalk の影響が大きいといった感じです。&lt;/p&gt;
+
+&lt;p&gt;そして Ruby の影響で Objective-C での開発フローやツールも変わってきているという話に移り、以下のライブラリやツールの紹介がありました。&lt;/p&gt;
+
+&lt;h5&gt;&lt;a href="http://cocoapods.org"&gt;CocoaPods&lt;/a&gt;&lt;/h5&gt;
+
+&lt;p&gt;Bundler for Objective-C&lt;/p&gt;
+
+&lt;h5&gt;&lt;a href="https://github.com/ReactiveCocoa/ReactiveCocoa"&gt;ReactiveCocoa&lt;/a&gt;&lt;/h5&gt;
+
+&lt;p&gt;Functional Reactive Programming Framework&lt;/p&gt;
+
+&lt;h5&gt;&lt;a href="https://github.com/tombenner/nui"&gt;NUI&lt;/a&gt;&lt;/h5&gt;
+
+&lt;p&gt;Stylesheets for iOS&lt;/p&gt;
+
+&lt;h5&gt;&lt;a href="https://github.com/square/KIF"&gt;KIF&lt;/a&gt;&lt;/h5&gt;
+
+&lt;p&gt;Testing framework&lt;/p&gt;
+
+&lt;h5&gt;&lt;a href="https://github.com/moredip/Frank"&gt;Frank&lt;/a&gt;&lt;/h5&gt;
+
+&lt;p&gt;Cucumber for iOS&lt;/p&gt;
+
+&lt;h5&gt;&lt;a href="https://github.com/mattt/cupertino"&gt;Cupertino&lt;/a&gt;&lt;/h5&gt;
+
+&lt;p&gt;CLI for Apple Developer
+&lt;a href="https://github.com/mattt/shenzhen"&gt;Shenzhen&lt;/a&gt;, &lt;a href="https://github.com/mattt/houston"&gt;Houston&lt;/a&gt;, &lt;a href="https://github.com/mattt/venice"&gt;Venice&lt;/a&gt;, &lt;a href="https://github.com/mattt/dubai"&gt;Dubai&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4&gt;More Than You Need to Know About CocoaPods - Eloy Duran さん&lt;/h4&gt;
+
+&lt;p&gt;CocoaPods についての説明と、今後の展開についてのお話でした。&lt;/p&gt;
+
+&lt;p&gt;例えば &lt;a href="https://github.com/AFNetworking/AFNetworking"&gt;AFNetworking&lt;/a&gt; を使おうとした場合、通常は Xcode であちこちをいじらないといけないところ、CocoaPods を使えばとても簡単に使えるというのを実際に動画であらかじめ撮影したデモを見せてもらい、CocoaPods 無しのライブラリのインストールのあまりの煩雑さに会場は大ウケでした。&lt;/p&gt;
+
+&lt;p&gt;CocoaPods の .podspec ファイルの運用については、従来は GitHub の Pull Request ベースで人力で運用していたところを、GitHub API と TravisCI API を使って、自動的に Pull Request を出してマージするサーバを作るようにする、というお話がありました。&lt;/p&gt;
+
+&lt;p&gt;また、CocoaPods でインストールできるライブラリのドキュメントを集約する &lt;a href="http://cocoadocs.org"&gt;CocoaDocs&lt;/a&gt; というサイトができました。(Ruby で言うところの &lt;a href="http://rubydoc.info"&gt;RubyDoc.info&lt;/a&gt; ですね。&lt;/p&gt;
+
+&lt;h4&gt;Wrapping iOS in RubyMotion - Clay Allsopp さん&lt;/h4&gt;
+
+&lt;p&gt;RubyMotion でより Ruby らしくアプリケーションを作るためのラッパーを作るコツのお話でした。&lt;/p&gt;
+
+&lt;p&gt;例えば delegate の代わりに callback を使うという例で以下のコードが挙げられていました。&lt;/p&gt;
+&lt;pre class="highlight ruby"&gt;&lt;span class="c1"&gt;# CoreLocation delegate&lt;/span&gt;
+&lt;span class="no"&gt;Location&lt;/span&gt;&lt;span class="nf"&gt;.get&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;location&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+  &lt;span class="nb"&gt;p&lt;/span&gt; &lt;span class="n"&gt;location&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="ss"&gt;:to&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;Location.get&lt;/code&gt; メソッドはブロックをインスタンス変数に入れて保持し、delegate を &lt;code&gt;self&lt;/code&gt; として delegate メソッド内でそのブロックを &lt;code&gt;call&lt;/code&gt; しているといった具合です。&lt;/p&gt;
+
+&lt;p&gt;また、ブロックを書くときも &lt;code&gt;-&gt;(arg1, arg2) {}&lt;/code&gt; の記法を使ったり、成功時と失敗時に別々のブロックを渡すような ObjC のメソッドをラップするときには Ruby では一つのブロックを渡すようにしてブロック中で &lt;code&gt;if request.success?&lt;/code&gt; みたいにして分岐する方が Ruby らしくなる、という話もありました。&lt;/p&gt;
+
+&lt;p&gt;あとは定数や ENUM は Symbol で指定できるようにすると使いやすいね、とか camelCase は snake_case に、演算子のオーバーロード、メタプログラミングなどの話もありましたのでスライドを参照してください。&lt;/p&gt;
+
+&lt;p&gt;スライド: &lt;a href="https://speakerdeck.com/clayallsopp/wrapping-ios-with-rubymotion"&gt;Wrapping iOS with RubyMotion&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4&gt;Goodbye IB, Hello Teacup - Colin Gray さん&lt;/h4&gt;
+
+&lt;p&gt;まずは &lt;a href="https://github.com/rubymotion/teacup"&gt;teacup&lt;/a&gt; gem の紹介でした。&lt;/p&gt;
+
+&lt;p&gt;Layout と Style というオブジェクトを使ってロジックと見た目を切り離して書くことができます。&lt;/p&gt;
+
+&lt;p&gt;また、&lt;a href="https://github.com/colinta/sweettea"&gt;sweettea&lt;/a&gt; も使うことで、Style をより CSS っぽく書くことも可能になります。&lt;/p&gt;
+
+&lt;p&gt;この場で実機で UI を Firebug や Chrome の開発者ツールのようにデバッグができる Kiln (今は名前が変わって &lt;a href="https://github.com/colinta/motion-xray"&gt;motion-xray&lt;/a&gt; になっています) という gem の発表がありました。&lt;/p&gt;
+
+&lt;h4&gt;Using BubbleWrap to Quickly Build RubyMotion Apps - Marin Usalj さん&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href="http://bubblewrap.io"&gt;BubbleWrap&lt;/a&gt; の各モジュールの紹介と簡単な使い方のお話でした。&lt;/p&gt;
+
+&lt;h4&gt;Mixing CoffeeScript in RubyMotion apps - Michael Erasmus さん&lt;/h4&gt;
+
+&lt;p&gt;cross platform の開発のために Web と Native のハイブリッドアプリを作っていて、Web の部分では CoffeeScript を使っているよ、という内容でした。&lt;/p&gt;
+
+&lt;p&gt;まだ試しているだけの段階で深いところまではやっていないけれども、ロジックを Web の中の CoffeeScript で書くことで各プラットフォームで再利用できるようにしたい、という狙いだそうです。&lt;/p&gt;
+
+&lt;p&gt;Native と CoffeeScript (JavaScript) とのやりとりは iframe を使っているそうです。&lt;/p&gt;
+
+&lt;h4&gt;Building Interactive Data Visualization Charts - Amit Kumar さん&lt;/h4&gt;
+
+&lt;p&gt;Data visualization ということで、いくつかのグラフを描画するライブラリについての紹介の後、ご自身で作られた gem の紹介でした。&lt;/p&gt;
+
+&lt;h5&gt;UIWebView を使うもの&lt;/h5&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.highcharts.com"&gt;Highcharts JS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5&gt;Native&lt;/h5&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Shinobi (有償)&lt;/li&gt;
+&lt;li&gt;iOS:Charts (有償)&lt;/li&gt;
+&lt;li&gt;CorePlot&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;このうち、Native かつ Open Source の CorePlot のラッパーが &lt;a href="https://github.com/toamitkumar/motion-plot"&gt;motion-plot&lt;/a&gt; です。&lt;/p&gt;
+
+&lt;p&gt;スライド: &lt;a href="https://speakerdeck.com/toamitkumar/rubymotion-building-interactive-data-visualization-charts"&gt;RubyMotion - Building Interactive Data Visualization Charts&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4&gt;Cocos2D, an Easier Way - Juan Karam さん&lt;/h4&gt;
+
+&lt;p&gt;ゲーム開発用のフレームワークである Cocos2D と、それとよく組み合わせて使われる物理演算エンジンの Box2D についてのお話でした。&lt;/p&gt;
+
+&lt;p&gt;Box2D は C++ で書かれているためにそのままでは RubyMotion から扱うことが出来ず、Objective-C でラッパーを書いてあげる必要があります。&lt;/p&gt;
+
+&lt;p&gt;そのあたりに手をつけ、RubyMotion から扱いやすくした gem がこの場で発表された &lt;a href="https://github.com/rubymotion/Joybox"&gt;Joybox&lt;/a&gt; です。&lt;/p&gt;
+
+&lt;p&gt;ライブコーディングであっという間にゲームを作っていた様子が圧巻でした。&lt;/p&gt;
+
+&lt;p&gt;まだまだ未実装だったり、ドキュメントが全然なかったりするので協力者を募集しています。&lt;/p&gt;
+
+&lt;h4&gt;Let&amp;#39;s Move with CoreMotion - Akshat Paul さん、Abhishek Nalwaya さん&lt;/h4&gt;
+
+&lt;p&gt;正直、内容をあんまり覚えていません。&lt;/p&gt;
+
+&lt;p&gt;iPhone の Prezi アプリでプレゼンをしていたのですが、途中で Push 通知が来たり、電話がかかってきたりして爆笑した記憶が強く。。。&lt;/p&gt;
+
+&lt;p&gt;iOS での加速度センサやジャイロスコープの扱いの話でした。&lt;/p&gt;
+
+&lt;h4&gt;RubyMotion: Past, Present and Future - Laurent Sansonetti さん&lt;/h4&gt;
+
+&lt;p&gt;Laurent さんのこれまでの半生と、今後の RubyMotion のロードマップについての発表がありました。&lt;/p&gt;
+
+&lt;h5&gt;ロードマップ&lt;/h5&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Toolchain improvements&lt;/li&gt;
+&lt;li&gt;Code generators&lt;/li&gt;
+&lt;li&gt;Profiler (CPU, Memory)&lt;/li&gt;
+&lt;li&gt;Code reloading (REPL)&lt;/li&gt;
+&lt;li&gt;Static code analysis&lt;/li&gt;
+&lt;li&gt;Tutorials&lt;/li&gt;
+&lt;li&gt;Enterprise support&lt;/li&gt;
+&lt;li&gt;More platforms&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;この中では、やはり More platforms が気になりますね。(BlackBerry ではないそうです/笑)&lt;/p&gt;
+
+&lt;p&gt;あとは Code reloading が便利そう。ちょっとした View の変更とかが再ビルドしなくても確認できるとなるとなかなか嬉しいですね。&lt;/p&gt;
+
+&lt;p&gt;次回のカンファレンス、#inspect 2014 は NewYork city か Mexico あたりで開催される予定らしいです。&lt;/p&gt;
+
+&lt;h3&gt;まとめ&lt;/h3&gt;
+
+&lt;p&gt;暗い場所だったのでだいぶブレましたが、アフターパーティで Laurent さんと撮りました。&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="with Laurent" src="../../../../../images/201304/laurent-142bdfd1.jpg" /&gt;&lt;/p&gt;
+
+&lt;p&gt;英語力の不足をひしひしと感じる中、なんとか発表の内容を理解しようと必死の2日間でした。なかなか参加者の方とコミュニケーションを取ることも大変だったのですが、最終日のアフターパーティではお酒の勢いを借りて色んな人とお話しできてよかったです。&lt;/p&gt;
+
+&lt;p&gt;日本でも 5/29 に &lt;a href="http://connpass.com/event/2095/"&gt;RubyMotion Kaigi 2013&lt;/a&gt; というイベントを予定していて、Laurent さんにもしゃべってもらう予定です。&lt;/p&gt;
+
+&lt;p&gt;15 年以上ぶりの海外で色々戸惑うところも多かったですが、記念すべき初めてのカンファレンスに参加できてとてもよかったです。&lt;/p&gt;
+
+&lt;p&gt;あわせて読みたい: &lt;a href="http://watson1978.github.io/blog/2013/03/31/rubymotion-conference-2013/"&gt;RubyMotion Conference 2013 - Watson&amp;#39;s Blog&lt;/a&gt;&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Rails Girls Tokyo 2nd に参加しました</title>
+    <link rel="alternate" href="http://blog.url.com/blog/2013/03/03/rails-girls-tokyo-2nd/"/>
+    <id>http://blog.url.com/blog/2013/03/03/rails-girls-tokyo-2nd/</id>
+    <published>2013-03-03T03:53:00Z</published>
+    <updated>2014-01-01T19:26:02+09:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;LT枠だけでの参加でしたが、&lt;a href="http://railsgirls.com/tokyo"&gt;Rails Girls Tokyo 2nd&lt;/a&gt; に混ぜてもらいました！&lt;/p&gt;
+
+&lt;p&gt;参加者の方が継続的に勉強を進められるコミュニティのご紹介として &lt;a href="http://prog4designer.github.com/"&gt;#p4d&lt;/a&gt; の宣伝をさせていただきました。&lt;/p&gt;
+
+&lt;p&gt;発表資料置いておきます。(&lt;a href="https://speakerdeck.com/satococoa/p4d-rails-girls-tokyo-2nd"&gt;スライドのページ&lt;/a&gt; にある Download PDF のリンクから PDF をダウンロードすればリンクも動作します。)&lt;/p&gt;
+
+&lt;script async class="speakerdeck-embed" data-id="b3a93dc064cc013060a912313916f057" data-ratio="1.2994923857868" src="//speakerdeck.com/assets/embed.js"&gt;&lt;/script&gt;
+
+&lt;h2&gt;【私撰】次のステップとしておすすめの Ruby コミュニティ【おまけ】&lt;/h2&gt;
+
+&lt;p&gt;個人的に僕がよく顔を出すコミュニティのうち、Rails Girls の参加者にお勧めできるコミュニティを挙げてみます。&lt;/p&gt;
+
+&lt;p&gt;昨日の帰り際に &lt;a href="https://twitter.com/yotii23"&gt;@yotii23&lt;/a&gt; さんともお話したのですが、まずは今回のコーチのいるコミュニティ（のコーチがちょうど参加している回）に行ってみるとすんなりとけ込めるのでは。と思います。&lt;/p&gt;
+
+&lt;p&gt;コメントは全て僕の主観ですのでご注意を。&lt;/p&gt;
+
+&lt;h3&gt;RailsGirls, More&lt;/h3&gt;
+
+&lt;p&gt;公式なので、間違いなくここがおすすめ。参加方法はFBグループかメールで参加者の方に届くそうです。&lt;/p&gt;
+
+&lt;p&gt;お問い合わせ先は &lt;a href="https://twitter.com/yotii23"&gt;@yotii23&lt;/a&gt; さんか &lt;a href="https://twitter.com/publichtml"&gt;@publichtml&lt;/a&gt; さんでいいのかな？&lt;/p&gt;
+
+&lt;h3&gt;&lt;a href="http://prog4designer.github.com/"&gt;P4D デザイナー向けプログラム部&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;LT させてもらったので概要は省略。&lt;/p&gt;
+
+&lt;h4&gt;会える人&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://twitter.com/machida"&gt;@machida&lt;/a&gt; さん&lt;br&gt;
+&lt;a href="http://fjord.jp"&gt;fjord&lt;/a&gt; のデザイナさん。&lt;a href="http://kuroigamen.com"&gt;KUROIGAMEN&lt;/a&gt; の人。&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://twitter.com/ken_c_lo"&gt;@ken&lt;em&gt;c&lt;/em&gt;lo&lt;/a&gt; さん&lt;br&gt;
+フリーのデザイナさん。&lt;a href="https://speakerdeck.com/ken_c_lo/zurui-design"&gt;ズルいデザイン&lt;/a&gt; の人。&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://twitter.com/shu_0115"&gt;@shu_0115&lt;/a&gt; さん&lt;br&gt;
+フリーの Rails エンジニア。&lt;a href="http://rails4beginners.github.com/home/"&gt;Rails for Beginners&lt;/a&gt; 主催の人。&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://twitter.com/satococoa"&gt;@satococoa&lt;/a&gt;&lt;br&gt;
+僕ですね。最近は&lt;a href="http://rubymotion.jp"&gt;RubyMotion JP&lt;/a&gt; の人。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;&lt;a href="https://ishikitakai.com/groups/1"&gt;Sendagaya.rb&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;毎週月曜日に meetup を開催している Ruby コミュニティです。今は新宿で毎週やっているのでアクセスの良さもポイント！&lt;/p&gt;
+
+&lt;p&gt;僕がいるときに来てもらえれば普通に Rails も教えたりできます。&lt;/p&gt;
+
+&lt;p&gt;紹介スライド -&gt; &lt;a href="http://decknotes.com/slides/17"&gt;ボクが東京に来て作ったモノ&lt;/a&gt; by @fukajun&lt;/p&gt;
+
+&lt;h4&gt;会える人&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://twitter.com/fukajun"&gt;@fukajun&lt;/a&gt; さん&lt;br&gt;
+Rails エンジニア。&lt;a href="http://decknotes.com/"&gt;DeckNotes&lt;/a&gt; 作った人。&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://twitter.com/ppworks"&gt;@ppworks&lt;/a&gt; さん&lt;br&gt;
+Rails エンジニア。&lt;a href="http://welove.herokuapp.com"&gt;we love heroku&lt;/a&gt; 作った人。&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://twitter.com/tkawa"&gt;@tkawa&lt;/a&gt; さん&lt;br&gt;
+Rails エンジニア。REST の人。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;&lt;a href="http://bukt.org/groups/3"&gt;Yokohama.rb&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;毎月第2土曜日あたりに横浜駅の一つ東京側の東神奈川駅から徒歩10分ほどの場所で開催しています。&lt;/p&gt;
+
+&lt;p&gt;東京から参加している人も多く、僕も1時間ちょいかけて通っています。&lt;/p&gt;
+
+&lt;p&gt;土曜日開催 &amp;amp; Ruby レシピブック読書会などもあり、Ruby ビギナーにもとても参加しやすい雰囲気がポイントです。&lt;/p&gt;
+
+&lt;h4&gt;会える人&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://twitter.com/1syo"&gt;@1syo&lt;/a&gt; さん&lt;br&gt;
+Rails エンジニア。&lt;a href="http://regional.rubykaigi.org/minato01"&gt;みなとRuby会議01&lt;/a&gt; 実行委員長。&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://twitter.com/hamakn"&gt;@hamakn&lt;/a&gt; さん&lt;br&gt;
+Rails エンジニア。&lt;a href="http://d.hatena.ne.jp/hamakn/20130217"&gt;デブサミで発表&lt;/a&gt; されてました。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;それぞれのコミュニティですごい人がたくさんいるのですが、失礼ながらとりあえずパッと頭に浮かんだ人だけ書かせていただきました。&lt;/p&gt;
+
+&lt;p&gt;では、またどこかのコミュニティでお会いしましょう！&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>RubyFriendsCamera has been released!</title>
+    <link rel="alternate" href="http://blog.url.com/blog/2013/02/25/rubyfriendscamera/"/>
+    <id>http://blog.url.com/blog/2013/02/25/rubyfriendscamera/</id>
+    <published>2013-02-25T09:54:00Z</published>
+    <updated>2013-12-20T21:37:21+09:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;Today I released RubyFriendsCamera and now available on &lt;a href="https://itunes.apple.com/jp/app/ruby-friends-camera/id602073192?mt=8"&gt;AppStore&lt;/a&gt;!&lt;/p&gt;
+
+&lt;p&gt;This application is a client app for &lt;a href="http://rubyfriends.com"&gt;#RubyFriends&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Using RubyFriendsCamera, you can easily share your photos to twitter with #RubyFriends hashtag.&lt;/p&gt;
+
+&lt;p&gt;RubyFriendsCamera is developed with &lt;a href="http://www.rubymotion.com"&gt;RubyMotion&lt;/a&gt; and &lt;a href="http://www.pixate.com"&gt;Pixate&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;d like to say thank you to &lt;a href="https://twitter.com/ken_c_lo"&gt;@ken&lt;em&gt;c&lt;/em&gt;lo&lt;/a&gt; and &lt;a href="https://twitter.com/machida"&gt;@machida&lt;/a&gt;.
+They created a great application icon, splash screen, toolbar icons, background images.&lt;/p&gt;
+
+&lt;p&gt;Source code is available here.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/satococoa/RubyFriendsCamera"&gt;https://github.com/satococoa/RubyFriendsCamera&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Enjoy!&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;RubyFriendsCamera というアプリケーションをリリースしました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://itunes.apple.com/jp/app/ruby-friends-camera/id602073192?mt=8"&gt;AppStore&lt;/a&gt; からインストールできます。&lt;/p&gt;
+
+&lt;p&gt;このアプリは &lt;a href="http://rubyfriends.com"&gt;#RubyFriends&lt;/a&gt; のクライアントアプリです。&lt;/p&gt;
+
+&lt;p&gt;RubyFriendsCamera を使うと簡単に #RubyFriendsCamera ハッシュタグをつけて twitter に写真を UP することができます。&lt;/p&gt;
+
+&lt;p&gt;RubyFriendsCamera は &lt;a href="http://www.rubymotion.com"&gt;RubyMotion&lt;/a&gt; と &lt;a href="http://www.pixate.com"&gt;Pixate&lt;/a&gt; を使って開発しています。&lt;/p&gt;
+
+&lt;p&gt;突然の依頼にもかかわらず、アイコンや画像などを作っていただいた &lt;a href="https://twitter.com/ken_c_lo"&gt;@ken&lt;em&gt;c&lt;/em&gt;lo&lt;/a&gt; さんと &lt;a href="https://twitter.com/machida"&gt;@machida&lt;/a&gt; さん、本当にありがとうございました。&lt;/p&gt;
+
+&lt;p&gt;ソースコードも公開されています。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/satococoa/RubyFriendsCamera"&gt;https://github.com/satococoa/RubyFriendsCamera&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;たくさんの方に楽しんでいただけると嬉しいです。
+(ところで、どなたかAndroid 版作りませんか？仕様や画像など、必要でしたらシェアします。)&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>RubyMotion のデバッグで NSZombieEnabled を使う</title>
+    <link rel="alternate" href="http://blog.url.com/blog/2013/02/20/debugging-rubymotion-using-nszombieenabled/"/>
+    <id>http://blog.url.com/blog/2013/02/20/debugging-rubymotion-using-nszombieenabled/</id>
+    <published>2013-02-20T10:17:00Z</published>
+    <updated>2014-01-01T19:34:06+09:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;RubyMotion でアプリをつくるとき、デバッグがやはり大変です。&lt;/p&gt;
+
+&lt;p&gt;例えば GCD など非同期で実行されるブロック内で参照されるオブジェクトをインスタンス変数に入れていない場合、実際にそのブロックの処理が実行されるときには既にそのオブジェクトが解放されてしまっているというケースがあります。&lt;br&gt;
+これが RubyMotion を使う上での一番厄介なハマりどころといえると思います。&lt;/p&gt;
+
+&lt;p&gt;そのケースにハマった場合、何も有用なログを残さずにすとんと落ちてしまうことがありとても萎えます。&lt;/p&gt;
+
+&lt;p&gt;例えば以下の例はあまりに単純すぎますが、当然アプリがすとんと落ちます。&lt;/p&gt;
+&lt;pre class="highlight ruby"&gt;&lt;span class="c1"&gt;# app_delegate.rb&lt;/span&gt;
+&lt;span class="k"&gt;class &lt;/span&gt;&lt;span class="nc"&gt;AppDelegate&lt;/span&gt;
+  &lt;span class="k"&gt;def &lt;/span&gt;&lt;span class="nf"&gt;application&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;application&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;didFinishLaunchingWithOptions&lt;/span&gt;&lt;span class="ss"&gt;:launchOptions&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;main&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;MainController&lt;/span&gt;&lt;span class="nf"&gt;.new&lt;/span&gt;
+    &lt;span class="vi"&gt;@window&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;UIWindow&lt;/span&gt;&lt;span class="nf"&gt;.alloc.initWithFrame&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="no"&gt;UIScreen&lt;/span&gt;&lt;span class="nf"&gt;.mainScreen.bounds&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="vi"&gt;@window&lt;/span&gt;&lt;span class="nf"&gt;.rootViewController&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;main&lt;/span&gt;
+    &lt;span class="vi"&gt;@window&lt;/span&gt;&lt;span class="nf"&gt;.makeKeyAndVisible&lt;/span&gt;
+    &lt;span class="kp"&gt;true&lt;/span&gt;
+  &lt;span class="k"&gt;end&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+
+&lt;span class="c1"&gt;# main_controller.rb&lt;/span&gt;
+&lt;span class="k"&gt;class &lt;/span&gt;&lt;span class="nc"&gt;MainController&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="no"&gt;UIViewController&lt;/span&gt;
+  &lt;span class="k"&gt;def &lt;/span&gt;&lt;span class="nf"&gt;viewDidLoad&lt;/span&gt;
+    &lt;span class="k"&gt;super&lt;/span&gt;
+    &lt;span class="n"&gt;label&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;UILabel&lt;/span&gt;&lt;span class="nf"&gt;.new.tap&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+      &lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="nf"&gt;.frame&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="o"&gt;[[&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;30&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;300&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;60&lt;/span&gt;&lt;span class="o"&gt;]]&lt;/span&gt;
+      &lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="nf"&gt;.text&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;hoge&amp;#39;&lt;/span&gt;
+    &lt;span class="k"&gt;end&lt;/span&gt;
+    &lt;span class="n"&gt;label&lt;/span&gt;&lt;span class="nf"&gt;.release&lt;/span&gt; &lt;span class="c1"&gt;# アプリを落とすために意図的に入れてます。&lt;/span&gt;
+    &lt;span class="n"&gt;view&lt;/span&gt;&lt;span class="nf"&gt;.addSubview&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;label&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="k"&gt;end&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;実行するとこうなります。&lt;/p&gt;
+&lt;pre class="highlight text"&gt;$ rake
+     Build ./build/iPhoneSimulator-6.1-Development
+   Compile ./app/main_controller.rb
+      Link ./build/iPhoneSimulator-6.1-Development/DebugDemo.app/DebugDemo
+    Create ./build/iPhoneSimulator-6.1-Development/DebugDemo.dSYM
+  Simulate ./build/iPhoneSimulator-6.1-Development/DebugDemo.app
+((null))&amp;gt; *** simulator session ended with error: Error Domain=DTiPhoneSimulatorErrorDomain Code=1 &amp;quot;シミュレートした App は終了しました。&amp;quot; UserInfo=0x10014db60 {NSLocalizedDescription=シミュレートした App は終了しました。, DTiPhoneSimulatorUnderlyingErrorCodeKey=-1}
+rake aborted!
+Command failed with status (1): [DYLD_FRAMEWORK_PATH=&amp;quot;/Applications/Xcode.a...]
+/Library/RubyMotion/lib/motion/project.rb:101:in `block in &amp;lt;top (required)&amp;gt;&amp;#39;
+Tasks: TOP =&amp;gt; default =&amp;gt; simulator
+(See full trace by running task with --trace)
+&lt;/pre&gt;
+&lt;p&gt;このとき、少なくともどのオブジェクト（どのクラスのインスタンス）にアクセスしようとして落ちたのかがわかるだけでもデバッグの助けになります。&lt;/p&gt;
+
+&lt;p&gt;以下のように &lt;code&gt;NSZombieEnabled=YES&lt;/code&gt; という環境変数をつけるとその情報を出すことが出来ます。&lt;/p&gt;
+&lt;pre class="highlight text"&gt;$ NSZombieEnabled=YES rake
+     Build ./build/iPhoneSimulator-6.1-Development
+  Simulate ./build/iPhoneSimulator-6.1-Development/DebugDemo.app
+2013-02-20 20:38:53.449 DebugDemo[21494:c07] *** -[UILabel superview]: message sent to deallocated instance 0xf1c9f40
+(main)&amp;gt; *** simulator session ended with error: Error Domain=DTiPhoneSimulatorErrorDomain Code=1 &amp;quot;シミュレートした App  は終了しました。&amp;quot; UserInfo=0x102252cc0 {NSLocalizedDescription=シミュレートした App は終了しました。, DTiPhoneSimulatorUnderlyingErrorCodeKey=-1}
+rake aborted!
+Command failed with status (1): [DYLD_FRAMEWORK_PATH=&amp;quot;/Applications/Xcode.a...]
+/Library/RubyMotion/lib/motion/project.rb:101:in `block in &amp;lt;top (required)&amp;gt;&amp;#39;
+Tasks: TOP =&amp;gt; default =&amp;gt; simulator
+(See full trace by running task with --trace)
+&lt;/pre&gt;&lt;pre class="highlight text"&gt;2013-02-20 20:38:53.449 DebugDemo[21494:c07] *** -[UILabel superview]: message sent to deallocated instance 0xf1c9f40
+&lt;/pre&gt;
+&lt;p&gt;って出ていますよね？これで、UILabelクラスのインスタンスが原因であることがわかります。&lt;/p&gt;
+
+&lt;p&gt;NSZombieEnabled については &lt;a href="http://cocoadev.com/wiki/NSZombie"&gt;NSZombieEnabled - CocoaDev&lt;/a&gt; がわかりやすいです。&lt;br&gt;
+ざっくり説明すると、解放されたオブジェクトのクラスを動的に &lt;code&gt;_NSZombie&lt;/code&gt; に変更し、そのメモリ領域を解放させないようにしているおかげで上記のような情報をログに出してくれているようです。&lt;/p&gt;
+
+&lt;p&gt;あとは &lt;a href="http://rubymotion.jp/RubyMotionDocumentation/articles/debugging/index.html"&gt;Debugging RubyMotion applications&lt;/a&gt; のページを参照していただいて、&lt;code&gt;debug&lt;/code&gt;オプションを使ってステップ実行したりするとより詳しくデバッグすることが出来ます。&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>DashDoc を入れてみた</title>
+    <link rel="alternate" href="http://blog.url.com/blog/2013/02/18/install-dashdoc/"/>
+    <id>http://blog.url.com/blog/2013/02/18/install-dashdoc/</id>
+    <published>2013-02-18T06:53:00Z</published>
+    <updated>2014-01-01T19:36:47+09:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;Dash を Sublime Text からワンタッチで引くことができる DashDoc というプラグインを入れてみた。&lt;/p&gt;
+
+&lt;p&gt;インストールはいつも通り Package Control からで OK。&lt;/p&gt;
+
+&lt;p&gt;デフォルトで ctrl+h が割り当てられてしまっていたので、変更した。&lt;br&gt;
+（この方法だと日本語入力時に不具合があります。追記をご参照ください。）&lt;/p&gt;
+
+&lt;p&gt;Preferences &amp;gt; Package Settings &amp;gt; DashDoc &amp;gt; Key Bindings - User&lt;/p&gt;
+&lt;pre class="highlight json"&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;keys&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;ctrl+h&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;command&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;left_delete&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;keys&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;shift+command+h&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;command&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;dash_doc&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;keys&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;ctrl+command+h&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;command&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;dash_doc&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+                            &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;args&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;syntax_sensitive&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;true&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/pre&gt;
+&lt;hr&gt;
+
+&lt;p&gt;あと、RubyMotion のドキュメントを直で引きたかったので追加した。
+Preferences &amp;gt; Package Settings &amp;gt; DashDoc &amp;gt; Settings - User&lt;/p&gt;
+&lt;pre class="highlight json"&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;syntax_sensitive&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;syntax_docset_map&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;ActionScript&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;actionscript&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;C&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;           &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;c&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;C++&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;cpp&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Clojure&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;     &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;clojure&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;CSS&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;css&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Erlang&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;erlang&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Groovy&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;groovy&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Haskell&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;     &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;haskell&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;HTML&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;html&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Java&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;java7&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;JavaScript&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;javascript&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Lisp&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;lisp&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Lua&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;lua&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Perl&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;perl&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;PHP&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;php&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Python&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;python2&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Rails&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;       &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;rails&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Ruby&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;ruby&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Scala&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;       &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;scala&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;ShellScript&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;manpages&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;SQL&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;psql&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;TCL&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;tcl&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;RubyMotion&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;rubymotion&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/pre&gt;
+&lt;p&gt;しばらく使ってみよう。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;2013-02-20 追記:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;left_delete&lt;/code&gt; を &lt;code&gt;ctrl+h&lt;/code&gt; に割り当てると、日本語の入力時におかしなことになってしまいました。具体的には、確定前の日本語を &lt;code&gt;ctrl+h&lt;/code&gt; で消したときに次の文字を入力すると復活してしまうという使いにくい状態になってしまいました。&lt;/p&gt;
+
+&lt;p&gt;結局、以下のようにしました&lt;/p&gt;
+
+&lt;p&gt;Preferences &amp;gt; Package Settings &amp;gt; DashDoc &amp;gt; Key Bindings - Default&lt;/p&gt;
+&lt;pre class="highlight json"&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;全部コメントアウト&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="err"&gt;//&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;keys&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;ctrl+h&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;command&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;dash_doc&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="err"&gt;//&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;keys&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;ctrl+alt+h&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;command&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;dash_doc&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="err"&gt;//&lt;/span&gt;&lt;span class="w"&gt;                           &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;args&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;syntax_sensitive&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;true&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/pre&gt;
+&lt;p&gt;Preferences &amp;gt; Package Settings &amp;gt; DashDoc &amp;gt; Key Bindings - User&lt;/p&gt;
+&lt;pre class="highlight json"&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;keys&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;shift+command+h&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;command&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;dash_doc&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;keys&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;ctrl+command+h&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;command&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;dash_doc&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+                            &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;args&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;syntax_sensitive&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;true&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/pre&gt;</content>
+  </entry>
+  <entry>
+    <title>第4回 Rails Girls, More 勉強会</title>
+    <link rel="alternate" href="http://blog.url.com/blog/2013/02/17/rails-girls-more-4th/"/>
+    <id>http://blog.url.com/blog/2013/02/17/rails-girls-more-4th/</id>
+    <published>2013-02-17T03:58:00Z</published>
+    <updated>2013-12-20T21:39:21+09:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;2/16(土) に万葉さんで開催された第4回 Rails Girls, More 勉強会に僭越ながらコーチ役として参加させていただきました。&lt;/p&gt;
+
+&lt;p&gt;勉強会のスタイルは、最初に参加者の方々に今日やりたいことを聞いて、それに合わせてコーチを割り当てて進めていくというなかなか贅沢なスタイル。&lt;/p&gt;
+
+&lt;p&gt;この日は参加者のみなさんの進捗が比較的揃っていて、controller, view を経て model へと進む方が多かったです。&lt;/p&gt;
+
+&lt;p&gt;コーチ役とはいえ、僕も初参加で何からどう教えていいかよくわかっていませんでしたが、そこは &lt;a href="https://twitter.com/igaiga555"&gt;@igaiga555&lt;/a&gt; 先生の作られたしっかりした資料があったおかげで特に困ることもなく進めることが出来ました。&lt;/p&gt;
+
+&lt;h2&gt;資料から脱線した部分&lt;/h2&gt;
+
+&lt;p&gt;資料にある部分は参加者の方もあとでそちらを見直せばいいと思うので、資料にはなく、僕が脱線して話したことについて少しメモします。&lt;/p&gt;
+
+&lt;h3&gt;&lt;a href="http://www.sublimetext.com"&gt;Sublime Text 2&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;今使っているエディタが使いにくい、という方がいらっしゃったので、Sublime Text 2 をダウンロードしてもらいました。Windows版もあって素敵。&lt;/p&gt;
+
+&lt;p&gt;今とても人気のあるエディタの一つで、vim や emacs よりはとっつきやすいエディタですので、エディタ選びに迷っている方は一度使ってみて下さい。有料ですが、お試し期間でも機能制限無し、お試し期間の期限もなし、という太っ腹なエディタです。（気に入ったら買うといいと思います。）&lt;/p&gt;
+
+&lt;h3&gt;GitHub の使い方&lt;/h3&gt;
+
+&lt;p&gt;お仕事で GitHub に触れる方もいらっしゃったので、リポジトリの作り方を一通りお見せしました。&lt;/p&gt;
+
+&lt;p&gt;「Git, GitHub の勉強会もやれるといいよねー」と、勉強会後に夕食を食べながらコーチ陣で話をしていましたので、そのうちやれるかも？&lt;/p&gt;
+
+&lt;h3&gt;&lt;code&gt;schema_migrations&lt;/code&gt;&lt;/h3&gt;
+
+&lt;p&gt;たまたま僕が担当させていただいたお二人が SQL をご存知の方だったので、DB に &lt;code&gt;schema_migrations&lt;/code&gt; というテーブルができていて、そこに適用済みの migration が記録されているおかげで、適切に &lt;code&gt;rake db:migrate&lt;/code&gt;, &lt;code&gt;rake db:rollback&lt;/code&gt; できるんですねー、といったお話をしました。&lt;/p&gt;
+
+&lt;h3&gt;RailsGuides&lt;/h3&gt;
+
+&lt;p&gt;RailsGuides の中でも、&lt;a href="http://guides.rubyonrails.org/active_record_querying.html"&gt;Active Record Query Interface&lt;/a&gt; のページを紹介し、コンソール上で &lt;code&gt;order&lt;/code&gt; メソッドや &lt;code&gt;where&lt;/code&gt; メソッドで遊んでみていただきました。&lt;/p&gt;
+
+&lt;p&gt;あと、&lt;a href="http://guides.rubyonrails.org/getting_started.html"&gt;Getting Started with Rails&lt;/a&gt; のページを上から順にざっと、「このセクションにはこんな内容が書いてあって...」といったレベルで説明させていただきました。今後自学自習される場合に、チュートリアルとしてすごくいい題材だと思ったので。&lt;/p&gt;
+
+&lt;h2&gt;まとめ&lt;/h2&gt;
+
+&lt;p&gt;初参加だったのでむしろ自分の方が緊張していましたが、とても和やかな雰囲気で楽しく参加させていただきました。&lt;/p&gt;
+
+&lt;p&gt;今後も Validation, Relation, テスト, Git など色々盛りだくさんの内容でやっていくようですので、またお手伝いさせていただければ、と思います。&lt;/p&gt;
+
+&lt;p&gt;RubyMotion もいつでも教えますよ！&lt;/p&gt;
+
+&lt;h2&gt;宣伝&lt;/h2&gt;
+
+&lt;p&gt;RailsGirls を入り口として色んな勉強会へ参加されるようになると、継続的に学習できていいのではと思います。&lt;/p&gt;
+
+&lt;p&gt;ということで自分の主催するコミュニティを宣伝して終わります。&lt;/p&gt;
+
+&lt;h3&gt;P4D(デザイナー向けプログラム部)&lt;/h3&gt;
+
+&lt;p&gt;僕が主催させていただいているコミュニティで、プログラムもやりたいデザイナさんにプログラムを教えよう、という会です。&lt;/p&gt;
+
+&lt;p&gt;最近は嬉しいことにプログラマがデザインを教えていただく逆パターンもよく見るようになってきて、プログラムについてもデザインについても気軽に相談できるコミュニティになりつつあります。&lt;/p&gt;
+
+&lt;p&gt;デザイナさんが恒常的に少なめなので、ぜひお気軽にご参加ください。&lt;/p&gt;
+
+&lt;p&gt;主に facebook グループ の &lt;a href="https://www.facebook.com/groups/151208708350141/"&gt;P4D デザイナー向けプログラム部&lt;/a&gt; でやりとりしてます。&lt;/p&gt;
+</content>
+  </entry>
+</feed>
