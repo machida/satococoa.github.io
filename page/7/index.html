@@ -52,6 +52,58 @@ satococoa's blog
 <div class='article'>
 <div class='main'>
 <h2>
+<a href="/blog/2012/12/01/rubymotion-first-step/">RubyMotion のはじめの一歩</a>
+</h2>
+<p>この記事は <a href="http://www.adventar.org/calendars/18">RubyMotion Advent Calendar 2012</a> の一日目の記事です。</p>
+
+<p>RubyMotion を買ってみたけれどもまだ具体的なアプリ作りまでは進んでいない方向けに、RubyMotion で手っ取り早くアプリ開発を始める手順をまとめてみます。</p>
+
+<h2>API リファレンスを準備する</h2>
+
+<p>RubyMotion での開発は <a href="https://developer.apple.com/jp/technologies/ios/cocoa-touch.html">Cocoa Touch</a> フレームワークを直接使いますので、Cocoa Touch の API リファレンスを常に引けるようにしておいて下さい。</p>
+
+<p><a href="http://www.rubymotion.com/developer-center/api/index.html">RubyMotion API Reference</a> を見るか、iOS アプリの開発を既に経験されている方は Cocoa Touch のドキュメントを見るのが良いと思います。</p>
+
+<p>RubyMotion 勉強会や RubyMotion もくもく会などで聞いてみたところ、<a href="https://itunes.apple.com/jp/app/dash-docs-snippets/id458034879?mt=12">Dash</a> を使っている人が大多数でした。</p>
+
+<p>Dash用の <a href="http://rubymotion.com/files/RubyMotion.docset.zip">RubyMotion Docset</a> も最近公開されました。（ファイルへの直リンクになっています。）</p>
+
+<h2>チュートリアル</h2>
+
+<p>手前味噌ですが、僕が以前 Rubyist Magazine に書かせ...</p>
+<p class='continue'>
+<a href="/blog/2012/12/01/rubymotion-first-step/">続きを読む &raquo;</a>
+</p>
+</div>
+<div class='meta'>
+<div class='published_at'>
+2012-12-01
+01:07
+</div>
+<ul class='tags'>
+<li>
+<a href="/blog/tags/rubymotion/">rubymotion</a>
+</li>
+</ul>
+<ul class='social'>
+<li class='hatena'>
+<a class='hatena-bookmark-button' data-hatena-bookmark-lang='ja' data-hatena-bookmark-layout='standard-balloon' data-hatena-bookmark-title='タイトル' href='http://b.hatena.ne.jp/entry/http://satococoa.github.io/blog/2012/12/01/rubymotion-first-step/' title='このエントリーをはてなブックマークに追加'>
+<img alt='このエントリーをはてなブックマークに追加' height='20' src='http://b.st-hatena.com/images/entry-button/button-only@2x.png' style='border: none;' width='20'>
+</a>
+</li>
+<li class='twitter'>
+<a class='twitter-share-button' data-lang='en' data-url='http://satococoa.github.io/blog/2012/12/01/rubymotion-first-step/' href='https://twitter.com/share'>Tweet</a>
+</li>
+<li class='facebook'>
+<div class='fb-like' data-action='like' data-href='http://satococoa.github.io/blog/2012/12/01/rubymotion-first-step/' data-layout='button_count' data-share='false' data-show-faces='false'></div>
+</li>
+</ul>
+</div>
+</div>
+
+<div class='article'>
+<div class='main'>
+<h2>
 <a href="/blog/2012/11/06/use-google-reader-api-with-ruby/">RubyでGoogleReaderAPIにアクセスする</a>
 </h2>
 <h2>やりたかったこと</h2>
@@ -153,62 +205,6 @@ $ pry
 </div>
 </div>
 
-<div class='article'>
-<div class='main'>
-<h2>
-<a href="/blog/2012/10/25/performance-test-with-httperf/">httperf でパフォーマンステストを行う</a>
-</h2>
-<p>httperf は ab (apache bench) と同じようなツールで、サーバの負荷テストに使うことができます。</p>
-
-<p>もうすぐリリースのサーバーに負荷をかける目的で使ってみたのでメモします。</p>
-
-<h2>インストール</h2>
-<pre class="highlight text"># Homebrew
-$ brew install httperf
-# CentOS
-$ sudo yum install httperf
-</pre>
-<h2>URLリストを作る</h2>
-
-<p>URLをファイルにまとめておいて、順番にアクセスさせることができます。
-実際のユーザのアクセスに近い負荷を作り出すことができますね！</p>
-
-<p>ちなみにファイルのフォーマットはnull文字区切りのテキストファイルです。nginxのアクセスログから作ってみます。</p>
-<pre class="highlight text">$ zcat /path/to/access.log-20121024.gz | awk '{ print $7 }' &gt; urllist.txt
-$ tr "\n" "\0" &lt; urllist.txt &gt; wlog.log
-</pre>
-<h2>実行</h2>
-<pre class="highlight text">$ httperf --hog --server example.com --port 80 --wlog Y,/tmp/wlog...</pre>
-<p class='continue'>
-<a href="/blog/2012/10/25/performance-test-with-httperf/">続きを読む &raquo;</a>
-</p>
-</div>
-<div class='meta'>
-<div class='published_at'>
-2012-10-25
-01:23
-</div>
-<ul class='tags'>
-<li>
-<a href="/blog/tags/linux/">linux</a>
-</li>
-</ul>
-<ul class='social'>
-<li class='hatena'>
-<a class='hatena-bookmark-button' data-hatena-bookmark-lang='ja' data-hatena-bookmark-layout='standard-balloon' data-hatena-bookmark-title='タイトル' href='http://b.hatena.ne.jp/entry/http://satococoa.github.io/blog/2012/10/25/performance-test-with-httperf/' title='このエントリーをはてなブックマークに追加'>
-<img alt='このエントリーをはてなブックマークに追加' height='20' src='http://b.st-hatena.com/images/entry-button/button-only@2x.png' style='border: none;' width='20'>
-</a>
-</li>
-<li class='twitter'>
-<a class='twitter-share-button' data-lang='en' data-url='http://satococoa.github.io/blog/2012/10/25/performance-test-with-httperf/' href='https://twitter.com/share'>Tweet</a>
-</li>
-<li class='facebook'>
-<div class='fb-like' data-action='like' data-href='http://satococoa.github.io/blog/2012/10/25/performance-test-with-httperf/' data-layout='button_count' data-share='false' data-show-faces='false'></div>
-</li>
-</ul>
-</div>
-</div>
-
 
 <ul class='paginate'>
 <li><a href="/page/6/">&lt; 前のページ</a></li>
@@ -221,6 +217,9 @@ $ tr "\n" "\0" &lt; urllist.txt &gt; wlog.log
 <h2>Recent Articles</h2>
 <ul>
 <li>
+<a href="/blog/2014/01/01/change-to-middleman-blog/">Middleman blog に変えてみた</a>
+</li>
+<li>
 <a href="/blog/2013/04/20/rubymotion-conference-number-inspect-2013/">RubyMotion Conference #inspect 2013</a>
 </li>
 <li>
@@ -231,9 +230,6 @@ $ tr "\n" "\0" &lt; urllist.txt &gt; wlog.log
 </li>
 <li>
 <a href="/blog/2013/02/20/debugging-rubymotion-using-nszombieenabled/">RubyMotion のデバッグで NSZombieEnabled を使う</a>
-</li>
-<li>
-<a href="/blog/2013/02/18/install-dashdoc/">DashDoc を入れてみた</a>
 </li>
 </ul>
 </div>
@@ -280,11 +276,19 @@ $ tr "\n" "\0" &lt; urllist.txt &gt; wlog.log
 <a href="/blog/tags/sublimetext/">sublimetext</a>
 (1)
 </li>
+<li>
+<a href="/blog/tags/middleman/">middleman</a>
+(1)
+</li>
 </ul>
 </div>
 <div class='by_year'>
 <h2>By Year</h2>
 <ul>
+<li>
+<a href="/blog/2014/">2014</a>
+(1)
+</li>
 <li>
 <a href="/blog/2013/">2013</a>
 (11)
@@ -296,6 +300,16 @@ $ tr "\n" "\0" &lt; urllist.txt &gt; wlog.log
 </ul>
 </div>
 </div>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(["_setAccount", "UA-32351198-1"]);
+  _gaq.push(["_trackPageview"]);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
 
 </body>
 </html>

@@ -52,6 +52,69 @@ satococoa's blog
 <div class='article'>
 <div class='main'>
 <h2>
+<a href="/blog/2012/12/31/2012-2013/">2012年のまとめと2013年の抱負</a>
+</h2>
+<p>2012年ももう最終日となってしまいましたので、まとめ的なブログでも書いてみようと思います。</p>
+
+<h2>2012年</h2>
+
+<p>2012年の年初に挙げた目標は「自重しない」ということでした。
+ある程度はその目標通り、色んなことにチャレンジできた1年だったと思います。</p>
+
+<p>特に思い出深い出来事を振り返ってみます。</p>
+
+<h3>みなとRuby会議01</h3>
+
+<p>6/2(土)に開催された<a href="http://regional.rubykaigi.org/minato01">みなとRuby会議01</a>の副実行委員長をやらせていただきました。</p>
+
+<p>ほとんどのメンバーが地域 Ruby 会議の運営が初めてという状態ではありましたが、1月から何度も打ち合わせを重ね、工夫を凝らして楽しい Ruby 会議を作ることが出来たと思います。</p>
+
+<p>そのときのエントリはこちらです。<a href="http://satococoa.github.com/blog/2012/06/04/minato-rubykaigi-01/">みなとRuby会議01</a></p>
+
+<p>唯一の心残りは Ruby アイドルの招致に失敗したことですね。</p>
+
+<h3>Yokohama.rb</h3>
+
+<p><a href="http://bukt.org/groups/3">Bu: Yokohama.rb</a></p>
+
+<p>今年も非常にお世話になりました。</p>
+
+<p>今、僕が積極的に勉強会などのコミュニティへ参加できるようになったのは Yokohama.rb でたくさんの仲間ができ、自信をもらったからです。</p>
+
+<p>ちなみによく聞かれるのですが、僕...</p>
+<p class='continue'>
+<a href="/blog/2012/12/31/2012-2013/">続きを読む &raquo;</a>
+</p>
+</div>
+<div class='meta'>
+<div class='published_at'>
+2012-12-31
+00:33
+</div>
+<ul class='tags'>
+<li>
+<a href="/blog/tags/日記/">日記</a>
+</li>
+</ul>
+<ul class='social'>
+<li class='hatena'>
+<a class='hatena-bookmark-button' data-hatena-bookmark-lang='ja' data-hatena-bookmark-layout='standard-balloon' data-hatena-bookmark-title='タイトル' href='http://b.hatena.ne.jp/entry/http://satococoa.github.io/blog/2012/12/31/2012-2013/' title='このエントリーをはてなブックマークに追加'>
+<img alt='このエントリーをはてなブックマークに追加' height='20' src='http://b.st-hatena.com/images/entry-button/button-only@2x.png' style='border: none;' width='20'>
+</a>
+</li>
+<li class='twitter'>
+<a class='twitter-share-button' data-lang='en' data-url='http://satococoa.github.io/blog/2012/12/31/2012-2013/' href='https://twitter.com/share'>Tweet</a>
+</li>
+<li class='facebook'>
+<div class='fb-like' data-action='like' data-href='http://satococoa.github.io/blog/2012/12/31/2012-2013/' data-layout='button_count' data-share='false' data-show-faces='false'></div>
+</li>
+</ul>
+</div>
+</div>
+
+<div class='article'>
+<div class='main'>
+<h2>
 <a href="/blog/2012/12/25/made-rubymotion-advent-calendar-2012-application/">RubyMotion Advent Calendar 2012 のアプリをつくりました</a>
 </h2>
 <p>この記事は <a href="http://www.adventar.org/calendars/18">RubyMotion Advent Calendar 2012</a> の25日目の記事です。</p>
@@ -165,66 +228,6 @@ satococoa's blog
 </div>
 </div>
 
-<div class='article'>
-<div class='main'>
-<h2>
-<a href="/blog/2012/12/17/use-nimbus-css-with-rubymotion/">RubyMotion で Nimbus CSS を使ってみる</a>
-</h2>
-<p>この記事は <a href="http://www.adventar.org/calendars/18">RubyMotion Advent Calendar 2012</a> の17日目の記事です。</p>
-
-<h2>Nimbus?</h2>
-
-<p>最近 <a href="http://fladdict.net/blog/2012/12/nimbus-kit.html">新Google Mapsアプリ採用のフレームワーク NimbusKit がいい感じ</a> で話題になった <a href="http://nimbuskit.info">NimbusKit</a> というフレームワークに興味を持ってちらっと調べてみたのですが、なんと CSS でアプリの View の定義ができるらしいということがわかりました。</p>
-
-<p>しかも、CSS を変更するとリアルタイムにその変更が反映されるそうじゃないですか！</p>
-
-<p>デモ動画はこちらです。</p>
-
-<iframe width="560" height="315" src="http://www.youtube.com/embed/i_5LbQ8e9BU" frameborder="0" allowfullscreen></iframe>
-
-<p>さっそく、RubyMotion からも使えるか、試してみました。</p>
-
-<h2>インストール</h2>
-
-<p>普通に motion-cocoapods でインストールできます。
-Rakefile にこんな感じに書いて、いつも通り<code>$ rake</code>でOKです。</p>
-<pre class="highlight ruby"><span class="n">app</span><span class="nf">.pods</span> <span class="k">do</span>
-  <span class="n">pod</span> <span class="s1">'Nimbus'</span>
-<span class="k">end</span>
-</pre>
-<h2>コード</h2>
-
-<p>Nimbus CSS 関連のコードだけ貼ります。基本的には公式のドキュメントの <a href="http://docs.nimbuskit.info/NimbusCSS.html">Nimbus: Nimbus CSS</a> にある "Recommended Procedure for Storing...</p>
-<p class='continue'>
-<a href="/blog/2012/12/17/use-nimbus-css-with-rubymotion/">続きを読む &raquo;</a>
-</p>
-</div>
-<div class='meta'>
-<div class='published_at'>
-2012-12-17
-20:50
-</div>
-<ul class='tags'>
-<li>
-<a href="/blog/tags/rubymotion/">rubymotion</a>
-</li>
-</ul>
-<ul class='social'>
-<li class='hatena'>
-<a class='hatena-bookmark-button' data-hatena-bookmark-lang='ja' data-hatena-bookmark-layout='standard-balloon' data-hatena-bookmark-title='タイトル' href='http://b.hatena.ne.jp/entry/http://satococoa.github.io/blog/2012/12/17/use-nimbus-css-with-rubymotion/' title='このエントリーをはてなブックマークに追加'>
-<img alt='このエントリーをはてなブックマークに追加' height='20' src='http://b.st-hatena.com/images/entry-button/button-only@2x.png' style='border: none;' width='20'>
-</a>
-</li>
-<li class='twitter'>
-<a class='twitter-share-button' data-lang='en' data-url='http://satococoa.github.io/blog/2012/12/17/use-nimbus-css-with-rubymotion/' href='https://twitter.com/share'>Tweet</a>
-</li>
-<li class='facebook'>
-<div class='fb-like' data-action='like' data-href='http://satococoa.github.io/blog/2012/12/17/use-nimbus-css-with-rubymotion/' data-layout='button_count' data-share='false' data-show-faces='false'></div>
-</li>
-</ul>
-</div>
-</div>
-
 
 <ul class='paginate'>
 <li><a href="/page/4/">&lt; 前のページ</a></li>
@@ -237,6 +240,9 @@ Rakefile にこんな感じに書いて、いつも通り<code>$ rake</code>でO
 <h2>Recent Articles</h2>
 <ul>
 <li>
+<a href="/blog/2014/01/01/change-to-middleman-blog/">Middleman blog に変えてみた</a>
+</li>
+<li>
 <a href="/blog/2013/04/20/rubymotion-conference-number-inspect-2013/">RubyMotion Conference #inspect 2013</a>
 </li>
 <li>
@@ -247,9 +253,6 @@ Rakefile にこんな感じに書いて、いつも通り<code>$ rake</code>でO
 </li>
 <li>
 <a href="/blog/2013/02/20/debugging-rubymotion-using-nszombieenabled/">RubyMotion のデバッグで NSZombieEnabled を使う</a>
-</li>
-<li>
-<a href="/blog/2013/02/18/install-dashdoc/">DashDoc を入れてみた</a>
 </li>
 </ul>
 </div>
@@ -296,11 +299,19 @@ Rakefile にこんな感じに書いて、いつも通り<code>$ rake</code>でO
 <a href="/blog/tags/sublimetext/">sublimetext</a>
 (1)
 </li>
+<li>
+<a href="/blog/tags/middleman/">middleman</a>
+(1)
+</li>
 </ul>
 </div>
 <div class='by_year'>
 <h2>By Year</h2>
 <ul>
+<li>
+<a href="/blog/2014/">2014</a>
+(1)
+</li>
 <li>
 <a href="/blog/2013/">2013</a>
 (11)
@@ -312,6 +323,16 @@ Rakefile にこんな感じに書いて、いつも通り<code>$ rake</code>でO
 </ul>
 </div>
 </div>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(["_setAccount", "UA-32351198-1"]);
+  _gaq.push(["_trackPageview"]);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
 
 </body>
 </html>

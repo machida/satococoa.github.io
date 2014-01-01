@@ -5,10 +5,33 @@
   <id>http://blog.url.com/blog</id>
   <link href="http://blog.url.com/blog"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2013-04-20T05:00:00Z</updated>
+  <updated>2014-01-01T14:49:57Z</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>Middleman blog に変えてみた</title>
+    <link rel="alternate" href="http://blog.url.com/blog/2014/01/01/change-to-middleman-blog/"/>
+    <id>http://blog.url.com/blog/2014/01/01/change-to-middleman-blog/</id>
+    <published>2014-01-01T14:49:57Z</published>
+    <updated>2014-01-01T23:54:26+09:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;去年の年末から取り組んでいたのですが、ようやく公開できる状態まで整えることが出来ました。&lt;/p&gt;
+
+&lt;p&gt;middleman を使う上では特に困ったことも無く、パーマリンクも以前の jekyll で作っていたブログの記事をそのまま持ってこられたので問題無しです。&lt;/p&gt;
+
+&lt;p&gt;それよりも見た目のデザインを整えるところでやっぱり時間がかかってしまいました。&lt;/p&gt;
+
+&lt;p&gt;なるべくシンプルに文章を読みやすいようにしたつもりです。
+とは言えやっつけの部分も多々あるので、記事を書きながらまた調整してみようと思います。&lt;/p&gt;
+
+&lt;p&gt;ようやく年を越せた気分です。&lt;/p&gt;
+
+&lt;p&gt;2013 年のまとめと 2014 年の豊富はまた明日にでも。&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>RubyMotion Conference #inspect 2013</title>
     <link rel="alternate" href="http://blog.url.com/blog/2013/04/20/rubymotion-conference-number-inspect-2013/"/>
@@ -641,73 +664,5 @@ Preferences &amp;gt; Package Settings &amp;gt; DashDoc &amp;gt; Settings - User&
                             &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;args&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;syntax_sensitive&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;true&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/pre&gt;</content>
-  </entry>
-  <entry>
-    <title>第4回 Rails Girls, More 勉強会</title>
-    <link rel="alternate" href="http://blog.url.com/blog/2013/02/17/rails-girls-more-4th/"/>
-    <id>http://blog.url.com/blog/2013/02/17/rails-girls-more-4th/</id>
-    <published>2013-02-17T03:58:00Z</published>
-    <updated>2013-12-20T21:39:21+09:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;2/16(土) に万葉さんで開催された第4回 Rails Girls, More 勉強会に僭越ながらコーチ役として参加させていただきました。&lt;/p&gt;
-
-&lt;p&gt;勉強会のスタイルは、最初に参加者の方々に今日やりたいことを聞いて、それに合わせてコーチを割り当てて進めていくというなかなか贅沢なスタイル。&lt;/p&gt;
-
-&lt;p&gt;この日は参加者のみなさんの進捗が比較的揃っていて、controller, view を経て model へと進む方が多かったです。&lt;/p&gt;
-
-&lt;p&gt;コーチ役とはいえ、僕も初参加で何からどう教えていいかよくわかっていませんでしたが、そこは &lt;a href="https://twitter.com/igaiga555"&gt;@igaiga555&lt;/a&gt; 先生の作られたしっかりした資料があったおかげで特に困ることもなく進めることが出来ました。&lt;/p&gt;
-
-&lt;h2&gt;資料から脱線した部分&lt;/h2&gt;
-
-&lt;p&gt;資料にある部分は参加者の方もあとでそちらを見直せばいいと思うので、資料にはなく、僕が脱線して話したことについて少しメモします。&lt;/p&gt;
-
-&lt;h3&gt;&lt;a href="http://www.sublimetext.com"&gt;Sublime Text 2&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;今使っているエディタが使いにくい、という方がいらっしゃったので、Sublime Text 2 をダウンロードしてもらいました。Windows版もあって素敵。&lt;/p&gt;
-
-&lt;p&gt;今とても人気のあるエディタの一つで、vim や emacs よりはとっつきやすいエディタですので、エディタ選びに迷っている方は一度使ってみて下さい。有料ですが、お試し期間でも機能制限無し、お試し期間の期限もなし、という太っ腹なエディタです。（気に入ったら買うといいと思います。）&lt;/p&gt;
-
-&lt;h3&gt;GitHub の使い方&lt;/h3&gt;
-
-&lt;p&gt;お仕事で GitHub に触れる方もいらっしゃったので、リポジトリの作り方を一通りお見せしました。&lt;/p&gt;
-
-&lt;p&gt;「Git, GitHub の勉強会もやれるといいよねー」と、勉強会後に夕食を食べながらコーチ陣で話をしていましたので、そのうちやれるかも？&lt;/p&gt;
-
-&lt;h3&gt;&lt;code&gt;schema_migrations&lt;/code&gt;&lt;/h3&gt;
-
-&lt;p&gt;たまたま僕が担当させていただいたお二人が SQL をご存知の方だったので、DB に &lt;code&gt;schema_migrations&lt;/code&gt; というテーブルができていて、そこに適用済みの migration が記録されているおかげで、適切に &lt;code&gt;rake db:migrate&lt;/code&gt;, &lt;code&gt;rake db:rollback&lt;/code&gt; できるんですねー、といったお話をしました。&lt;/p&gt;
-
-&lt;h3&gt;RailsGuides&lt;/h3&gt;
-
-&lt;p&gt;RailsGuides の中でも、&lt;a href="http://guides.rubyonrails.org/active_record_querying.html"&gt;Active Record Query Interface&lt;/a&gt; のページを紹介し、コンソール上で &lt;code&gt;order&lt;/code&gt; メソッドや &lt;code&gt;where&lt;/code&gt; メソッドで遊んでみていただきました。&lt;/p&gt;
-
-&lt;p&gt;あと、&lt;a href="http://guides.rubyonrails.org/getting_started.html"&gt;Getting Started with Rails&lt;/a&gt; のページを上から順にざっと、「このセクションにはこんな内容が書いてあって...」といったレベルで説明させていただきました。今後自学自習される場合に、チュートリアルとしてすごくいい題材だと思ったので。&lt;/p&gt;
-
-&lt;h2&gt;まとめ&lt;/h2&gt;
-
-&lt;p&gt;初参加だったのでむしろ自分の方が緊張していましたが、とても和やかな雰囲気で楽しく参加させていただきました。&lt;/p&gt;
-
-&lt;p&gt;今後も Validation, Relation, テスト, Git など色々盛りだくさんの内容でやっていくようですので、またお手伝いさせていただければ、と思います。&lt;/p&gt;
-
-&lt;p&gt;RubyMotion もいつでも教えますよ！&lt;/p&gt;
-
-&lt;h2&gt;宣伝&lt;/h2&gt;
-
-&lt;p&gt;RailsGirls を入り口として色んな勉強会へ参加されるようになると、継続的に学習できていいのではと思います。&lt;/p&gt;
-
-&lt;p&gt;ということで自分の主催するコミュニティを宣伝して終わります。&lt;/p&gt;
-
-&lt;h3&gt;P4D(デザイナー向けプログラム部)&lt;/h3&gt;
-
-&lt;p&gt;僕が主催させていただいているコミュニティで、プログラムもやりたいデザイナさんにプログラムを教えよう、という会です。&lt;/p&gt;
-
-&lt;p&gt;最近は嬉しいことにプログラマがデザインを教えていただく逆パターンもよく見るようになってきて、プログラムについてもデザインについても気軽に相談できるコミュニティになりつつあります。&lt;/p&gt;
-
-&lt;p&gt;デザイナさんが恒常的に少なめなので、ぜひお気軽にご参加ください。&lt;/p&gt;
-
-&lt;p&gt;主に facebook グループ の &lt;a href="https://www.facebook.com/groups/151208708350141/"&gt;P4D デザイナー向けプログラム部&lt;/a&gt; でやりとりしてます。&lt;/p&gt;
-</content>
   </entry>
 </feed>

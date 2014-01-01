@@ -4,14 +4,14 @@
 <meta charset='utf-8'>
 <meta content='width=device-width, initial-scale=1.0' name='viewport'>
 <meta content='IE=edge;chrome=1' http-equiv='X-UA-Compatible'>
-<link href="../../../../../stylesheets/application-dfa252fc.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="../../../stylesheets/application-dfa252fc.css" media="screen" rel="stylesheet" type="text/css" />
 <script async='async' charset='utf-8' src='http://b.st-hatena.com/js/bookmark_button.js' type='text/javascript'></script>
 <script>
   !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
 </script>
 <script async charset='utf-8' src='//platform.twitter.com/widgets.js'></script>
 <title>
-satococoa's blog - Ruby 2.0.0-preview2 をインストール
+satococoa's blog
 </title>
 <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/blog/feed.xml" />
 </head>
@@ -40,72 +40,68 @@ satococoa's blog - Ruby 2.0.0-preview2 をインストール
 </div>
 </div>
 
+<div id='main' role='main'>
 <nav class='topic_path'>
 <ul>
 <li>
 <a href="/">Top</a>
 </li>
-<li>Ruby 2.0.0-preview2 をインストール</li>
+<li>
+Month: 2014-01
+</li>
 </ul>
 </nav>
-<div id='main' role='main'>
 <div class='article'>
 <div class='main'>
 <h2>
-<a href="/blog/2012/12/02/install-ruby-2-dot-0-0-preview2/">Ruby 2.0.0-preview2 をインストール</a>
+<a href="/blog/2014/01/01/change-to-middleman-blog/">Middleman blog に変えてみた</a>
 </h2>
-<p>普通に <code>rbenv install 2.0.0-preview2</code> したら openssl を require できなかったので以下の手順を行った。</p>
+<p>去年の年末から取り組んでいたのですが、ようやく公開できる状態まで整えることが出来ました。</p>
 
-<p>環境は</p>
+<p>middleman を使う上では特に困ったことも無く、パーマリンクも以前の jekyll で作っていたブログの記事をそのまま持ってこられたので問題無しです。</p>
 
-<ul>
-<li>Mac OS X 10.8.2 (10.7.xからのアップグレード)</li>
-<li>brew</li>
-<li>brew でインストールした rbenv, ruby-build を使用</li>
-<li>zsh</li>
-</ul>
-<pre class="highlight text">$ brew install openssl
-$ vim .zshrc
-# 以下を追記
-export CONFIGURE_OPTS=&#39;--with-readline-dir=/usr/local/opt/readline --with-openssl-dir=/usr/local/opt/openssl&#39; 
-$ rbenv install 2.0.0-preview2
-$ rbenv global 2.0.0-preview2
-$ ruby -ropen-uri -e &#39;p open(&quot;https://www.google.com/&quot;).read&#39;
-OpenSSL::SSL::SSLError: SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B: certificate verify failed
-…(snip)
-# 証明書が無いのが原因？
-$ curl -O http://curl.haxx.se/ca/cacert.pem
-# 証明書はどこに置けば良いの？
-$ ruby -ropenssl -e &#39;p OpenSSL::X509::DEFAULT_CERT_FILE&#39;
-&quot;/usr/local/etc/openssl/cert.pem&quot;
-$ mv cacert.pem /usr/local/etc/openssl/cert.pem
-</pre>
+<p>それよりも見た目のデザインを整えるところでやっぱり時間がかかってしまいました。</p>
+
+<p>なるべくシンプルに文章を読みやすいようにしたつもりです。
+とは言えやっつけの部分も多々あるので、記事を書きながらまた調整してみようと思います。</p>
+
+<p>ようやく年を越せた気分です。</p>
+
+<p>2013 年のまとめと 2014 年の豊富はまた明日にでも。</p>
+
+<p class='continue'>
+<a href="/blog/2014/01/01/change-to-middleman-blog/">続きを読む &raquo;</a>
+</p>
 </div>
 <div class='meta'>
 <div class='published_at'>
-2012-12-02
-17:11
+2014-01-01
+23:49
 </div>
 <ul class='tags'>
 <li>
-<a href="/blog/tags/ruby/">ruby</a>
+<a href="/blog/tags/middleman/">middleman</a>
 </li>
 </ul>
 <ul class='social'>
 <li class='hatena'>
-<a class='hatena-bookmark-button' data-hatena-bookmark-lang='ja' data-hatena-bookmark-layout='standard-balloon' data-hatena-bookmark-title='タイトル' href='http://b.hatena.ne.jp/entry/http://satococoa.github.io/blog/2012/12/02/install-ruby-2-dot-0-0-preview2/' title='このエントリーをはてなブックマークに追加'>
+<a class='hatena-bookmark-button' data-hatena-bookmark-lang='ja' data-hatena-bookmark-layout='standard-balloon' data-hatena-bookmark-title='タイトル' href='http://b.hatena.ne.jp/entry/http://satococoa.github.io/blog/2014/01/01/change-to-middleman-blog/' title='このエントリーをはてなブックマークに追加'>
 <img alt='このエントリーをはてなブックマークに追加' height='20' src='http://b.st-hatena.com/images/entry-button/button-only@2x.png' style='border: none;' width='20'>
 </a>
 </li>
 <li class='twitter'>
-<a class='twitter-share-button' data-lang='en' data-url='http://satococoa.github.io/blog/2012/12/02/install-ruby-2-dot-0-0-preview2/' href='https://twitter.com/share'>Tweet</a>
+<a class='twitter-share-button' data-lang='en' data-url='http://satococoa.github.io/blog/2014/01/01/change-to-middleman-blog/' href='https://twitter.com/share'>Tweet</a>
 </li>
 <li class='facebook'>
-<div class='fb-like' data-action='like' data-href='http://satococoa.github.io/blog/2012/12/02/install-ruby-2-dot-0-0-preview2/' data-layout='button_count' data-share='false' data-show-faces='false'></div>
+<div class='fb-like' data-action='like' data-href='http://satococoa.github.io/blog/2014/01/01/change-to-middleman-blog/' data-layout='button_count' data-share='false' data-show-faces='false'></div>
 </li>
 </ul>
 </div>
 </div>
+
+
+<ul class='paginate'>
+</ul>
 
 </div>
 <div class='global_footer'>

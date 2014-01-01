@@ -52,6 +52,66 @@ satococoa's blog
 <div class='article'>
 <div class='main'>
 <h2>
+<a href="/blog/2012/12/17/use-nimbus-css-with-rubymotion/">RubyMotion で Nimbus CSS を使ってみる</a>
+</h2>
+<p>この記事は <a href="http://www.adventar.org/calendars/18">RubyMotion Advent Calendar 2012</a> の17日目の記事です。</p>
+
+<h2>Nimbus?</h2>
+
+<p>最近 <a href="http://fladdict.net/blog/2012/12/nimbus-kit.html">新Google Mapsアプリ採用のフレームワーク NimbusKit がいい感じ</a> で話題になった <a href="http://nimbuskit.info">NimbusKit</a> というフレームワークに興味を持ってちらっと調べてみたのですが、なんと CSS でアプリの View の定義ができるらしいということがわかりました。</p>
+
+<p>しかも、CSS を変更するとリアルタイムにその変更が反映されるそうじゃないですか！</p>
+
+<p>デモ動画はこちらです。</p>
+
+<iframe width="560" height="315" src="http://www.youtube.com/embed/i_5LbQ8e9BU" frameborder="0" allowfullscreen></iframe>
+
+<p>さっそく、RubyMotion からも使えるか、試してみました。</p>
+
+<h2>インストール</h2>
+
+<p>普通に motion-cocoapods でインストールできます。
+Rakefile にこんな感じに書いて、いつも通り<code>$ rake</code>でOKです。</p>
+<pre class="highlight ruby"><span class="n">app</span><span class="nf">.pods</span> <span class="k">do</span>
+  <span class="n">pod</span> <span class="s1">'Nimbus'</span>
+<span class="k">end</span>
+</pre>
+<h2>コード</h2>
+
+<p>Nimbus CSS 関連のコードだけ貼ります。基本的には公式のドキュメントの <a href="http://docs.nimbuskit.info/NimbusCSS.html">Nimbus: Nimbus CSS</a> にある "Recommended Procedure for Storing...</p>
+<p class='continue'>
+<a href="/blog/2012/12/17/use-nimbus-css-with-rubymotion/">続きを読む &raquo;</a>
+</p>
+</div>
+<div class='meta'>
+<div class='published_at'>
+2012-12-17
+20:50
+</div>
+<ul class='tags'>
+<li>
+<a href="/blog/tags/rubymotion/">rubymotion</a>
+</li>
+</ul>
+<ul class='social'>
+<li class='hatena'>
+<a class='hatena-bookmark-button' data-hatena-bookmark-lang='ja' data-hatena-bookmark-layout='standard-balloon' data-hatena-bookmark-title='タイトル' href='http://b.hatena.ne.jp/entry/http://satococoa.github.io/blog/2012/12/17/use-nimbus-css-with-rubymotion/' title='このエントリーをはてなブックマークに追加'>
+<img alt='このエントリーをはてなブックマークに追加' height='20' src='http://b.st-hatena.com/images/entry-button/button-only@2x.png' style='border: none;' width='20'>
+</a>
+</li>
+<li class='twitter'>
+<a class='twitter-share-button' data-lang='en' data-url='http://satococoa.github.io/blog/2012/12/17/use-nimbus-css-with-rubymotion/' href='https://twitter.com/share'>Tweet</a>
+</li>
+<li class='facebook'>
+<div class='fb-like' data-action='like' data-href='http://satococoa.github.io/blog/2012/12/17/use-nimbus-css-with-rubymotion/' data-layout='button_count' data-share='false' data-show-faces='false'></div>
+</li>
+</ul>
+</div>
+</div>
+
+<div class='article'>
+<div class='main'>
+<h2>
 <a href="/blog/2012/12/08/rubymotion-tips/">RubyMotion の小ワザ</a>
 </h2>
 <p>この記事は <a href="http://www.adventar.org/calendars/18">RubyMotion Advent Calendar 2012</a> の8日目の記事です。</p>
@@ -157,58 +217,6 @@ OpenSSL::SSL::SSLError: SSL_connect returned=1 errno=0 state...</pre>
 </div>
 </div>
 
-<div class='article'>
-<div class='main'>
-<h2>
-<a href="/blog/2012/12/01/rubymotion-first-step/">RubyMotion のはじめの一歩</a>
-</h2>
-<p>この記事は <a href="http://www.adventar.org/calendars/18">RubyMotion Advent Calendar 2012</a> の一日目の記事です。</p>
-
-<p>RubyMotion を買ってみたけれどもまだ具体的なアプリ作りまでは進んでいない方向けに、RubyMotion で手っ取り早くアプリ開発を始める手順をまとめてみます。</p>
-
-<h2>API リファレンスを準備する</h2>
-
-<p>RubyMotion での開発は <a href="https://developer.apple.com/jp/technologies/ios/cocoa-touch.html">Cocoa Touch</a> フレームワークを直接使いますので、Cocoa Touch の API リファレンスを常に引けるようにしておいて下さい。</p>
-
-<p><a href="http://www.rubymotion.com/developer-center/api/index.html">RubyMotion API Reference</a> を見るか、iOS アプリの開発を既に経験されている方は Cocoa Touch のドキュメントを見るのが良いと思います。</p>
-
-<p>RubyMotion 勉強会や RubyMotion もくもく会などで聞いてみたところ、<a href="https://itunes.apple.com/jp/app/dash-docs-snippets/id458034879?mt=12">Dash</a> を使っている人が大多数でした。</p>
-
-<p>Dash用の <a href="http://rubymotion.com/files/RubyMotion.docset.zip">RubyMotion Docset</a> も最近公開されました。（ファイルへの直リンクになっています。）</p>
-
-<h2>チュートリアル</h2>
-
-<p>手前味噌ですが、僕が以前 Rubyist Magazine に書かせ...</p>
-<p class='continue'>
-<a href="/blog/2012/12/01/rubymotion-first-step/">続きを読む &raquo;</a>
-</p>
-</div>
-<div class='meta'>
-<div class='published_at'>
-2012-12-01
-01:07
-</div>
-<ul class='tags'>
-<li>
-<a href="/blog/tags/rubymotion/">rubymotion</a>
-</li>
-</ul>
-<ul class='social'>
-<li class='hatena'>
-<a class='hatena-bookmark-button' data-hatena-bookmark-lang='ja' data-hatena-bookmark-layout='standard-balloon' data-hatena-bookmark-title='タイトル' href='http://b.hatena.ne.jp/entry/http://satococoa.github.io/blog/2012/12/01/rubymotion-first-step/' title='このエントリーをはてなブックマークに追加'>
-<img alt='このエントリーをはてなブックマークに追加' height='20' src='http://b.st-hatena.com/images/entry-button/button-only@2x.png' style='border: none;' width='20'>
-</a>
-</li>
-<li class='twitter'>
-<a class='twitter-share-button' data-lang='en' data-url='http://satococoa.github.io/blog/2012/12/01/rubymotion-first-step/' href='https://twitter.com/share'>Tweet</a>
-</li>
-<li class='facebook'>
-<div class='fb-like' data-action='like' data-href='http://satococoa.github.io/blog/2012/12/01/rubymotion-first-step/' data-layout='button_count' data-share='false' data-show-faces='false'></div>
-</li>
-</ul>
-</div>
-</div>
-
 
 <ul class='paginate'>
 <li><a href="/page/5/">&lt; 前のページ</a></li>
@@ -221,6 +229,9 @@ OpenSSL::SSL::SSLError: SSL_connect returned=1 errno=0 state...</pre>
 <h2>Recent Articles</h2>
 <ul>
 <li>
+<a href="/blog/2014/01/01/change-to-middleman-blog/">Middleman blog に変えてみた</a>
+</li>
+<li>
 <a href="/blog/2013/04/20/rubymotion-conference-number-inspect-2013/">RubyMotion Conference #inspect 2013</a>
 </li>
 <li>
@@ -231,9 +242,6 @@ OpenSSL::SSL::SSLError: SSL_connect returned=1 errno=0 state...</pre>
 </li>
 <li>
 <a href="/blog/2013/02/20/debugging-rubymotion-using-nszombieenabled/">RubyMotion のデバッグで NSZombieEnabled を使う</a>
-</li>
-<li>
-<a href="/blog/2013/02/18/install-dashdoc/">DashDoc を入れてみた</a>
 </li>
 </ul>
 </div>
@@ -280,11 +288,19 @@ OpenSSL::SSL::SSLError: SSL_connect returned=1 errno=0 state...</pre>
 <a href="/blog/tags/sublimetext/">sublimetext</a>
 (1)
 </li>
+<li>
+<a href="/blog/tags/middleman/">middleman</a>
+(1)
+</li>
 </ul>
 </div>
 <div class='by_year'>
 <h2>By Year</h2>
 <ul>
+<li>
+<a href="/blog/2014/">2014</a>
+(1)
+</li>
 <li>
 <a href="/blog/2013/">2013</a>
 (11)
@@ -296,6 +312,16 @@ OpenSSL::SSL::SSLError: SSL_connect returned=1 errno=0 state...</pre>
 </ul>
 </div>
 </div>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(["_setAccount", "UA-32351198-1"]);
+  _gaq.push(["_trackPageview"]);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
 
 </body>
 </html>
