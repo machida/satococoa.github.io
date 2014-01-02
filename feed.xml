@@ -5,10 +5,140 @@
   <id>http://blog.url.com/blog</id>
   <link href="http://blog.url.com/blog"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2014-01-01T14:49:57Z</updated>
+  <updated>2014-01-02T07:12:50Z</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>2014 年の抱負</title>
+    <link rel="alternate" href="http://blog.url.com/blog/2014/01/02/new-year-s-resolution-2014/"/>
+    <id>http://blog.url.com/blog/2014/01/02/new-year-s-resolution-2014/</id>
+    <published>2014-01-02T07:12:50Z</published>
+    <updated>2014-01-02T17:07:24+09:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;2014 年の年明けから一日経ってしまいましたが、改めて 2013 年のまとめと 2014 年の抱負を書いておこうと思います。&lt;/p&gt;
+
+&lt;p&gt;ちなみに去年書いたのはこれ -&gt; &lt;a href="http://satococoa.github.io/blog/2012/12/31/2012-2013/"&gt;2012年のまとめと2013年の抱負&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3&gt;2013 年のまとめ&lt;/h3&gt;
+
+&lt;p&gt;そういえば、2013 年のテーマは「広げる」ということでした。「自重しない」は 2012 年のテーマだったのですが、勘違いして一年間「自重しない」ことも心がけて行動していたような気がします。&lt;/p&gt;
+
+&lt;p&gt;2013 年にやりたいこととして挙げたことですが、以下のようになりました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[ ] ビギナー向けの iOS アプリ勉強会: #P4D で時々教えていたのでそれでもいいのかもしれませんが、単独での開催はできませんでした。&lt;/li&gt;
+&lt;li&gt;[x] 第2回プログラマ向けデザイン勉強会:  &lt;a href="http://connpass.com/event/1746/"&gt;やりました&lt;/a&gt;！そういえば大江戸 Ruby 会議 03 とかぶった日程でやりましたね。。&lt;/li&gt;
+&lt;li&gt;[x] 本や記事を書きたい: 運良く 7 月にお声がけいただき、&lt;a href="http://mobiletou.ch"&gt;Mobile Touch&lt;/a&gt; で &lt;a href="http://mobiletou.ch/stories/実践！rubymotion"&gt;実践！RubyMotion&lt;/a&gt; という連載を持たせていただいています。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;月単位で振り返ってみると以下のような感じ。&lt;/p&gt;
+
+&lt;h4&gt;1 月&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href="http://satococoa.github.io/blog/2013/01/15/tkrk10/"&gt;東京 Ruby 会議 10に参加しました&lt;/a&gt;。とは言え、僕の順番の直前で大雪による中断となり、実際に僕が壇上に上がって発表したのは 2 月でした。&lt;/p&gt;
+
+&lt;p&gt;あ、そうそう #P4D で&lt;a href="http://tokyo10.rubykaigi.info/workshops/p4d"&gt;ワークショップ&lt;/a&gt;をもたせてもらったのでした。&lt;/p&gt;
+
+&lt;h4&gt;2 月&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href="http://satococoa.github.io/blog/2013/02/05/qiita-2-day-hackathon/"&gt;Qiita 2-day Hackathon&lt;/a&gt; に参加しました。この頃は RubyMotion + Pixate がアツかった記憶があります。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://bekkou68.hatenablog.com/entry/2013/02/24/230011"&gt;ネコハッカソンが開催されました(=^・ω・^=) #willcat&lt;/a&gt;
+これも 2 月でしたね。楽しかった、また行きたい。またやりましょう。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://ruby20th.herokuapp.com"&gt;Ruby 20 周年パーティ&lt;/a&gt;に間に合わずに数日後に &lt;a href="https://itunes.apple.com/jp/app/ruby-friends-camera/id602073192?mt=8"&gt;Ruby Friends Camera&lt;/a&gt; をリリースしたのもこの月でした。(iOS 7 対応版のアップデートしなきゃ。。)&lt;/p&gt;
+
+&lt;p&gt;あとはこの頃は 3 月のベルギー行きの準備で色々あたふたしていたようです。&lt;/p&gt;
+
+&lt;h4&gt;3 月&lt;/h4&gt;
+
+&lt;p&gt;改めて見ると、この月はすごく忙しかったようです。&lt;/p&gt;
+
+&lt;p&gt;LT だけの参加でしたが、まずは &lt;a href="http://satococoa.github.io/blog/2013/03/03/rails-girls-tokyo-2nd/"&gt;Rails Girls Tokyo 2nd に参加しました&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;さらに前述の &lt;a href="http://connpass.com/event/1746/"&gt;第2回プログラマ向けデザイン勉強会&lt;/a&gt;、&lt;a href="http://trbmeetup.doorkeeper.jp/"&gt;Tokyo Rubyist Meetup&lt;/a&gt; でほぼ全編英語での&lt;a href="http://trbmeetup.doorkeeper.jp/events/2814"&gt;ペアプロ&lt;/a&gt;、そしてベルギーで行われた &lt;a href="http://satococoa.github.io/blog/2013/04/20/rubymotion-conference-number-inspect-2013/"&gt;RubyMotion Conference #inspect 2013&lt;/a&gt; ですね。&lt;/p&gt;
+
+&lt;p&gt;ベルギーから帰国した当日に Rails Girls, More に参加して、報告ブログよりも Girls たちと楽しむことを優先して RubyMotion 界隈から dis られたのもいい思い出です。&lt;/p&gt;
+
+&lt;h4&gt;4 月&lt;/h4&gt;
+
+&lt;h1&gt;P4D で&lt;a href="http://willnet.in/90"&gt;温泉合宿&lt;/a&gt;に行っていました。この辺から力尽きたらしく、僕は全然ブログを書いていないですね。。&lt;/h1&gt;
+
+&lt;p&gt;この場で、RubyMotion Conference のブログ記事を書いていたのでした。日光、良かったなぁ。&lt;/p&gt;
+
+&lt;h4&gt;5 月&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href="http://connpass.com/event/2095/"&gt;RubyMotion Kaigi 2013&lt;/a&gt; というのを RubyKaigi の前日に主催していました。&lt;/p&gt;
+
+&lt;p&gt;ブログは書いていませんが、そういえばるびまにはちゃんと記事を書いていた！&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://magazine.rubyist.net/?0043-RubyMotionKaigi2013Report"&gt;Rubyist Magazine - RubyMotion Kaigi 2013 レポート&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4&gt;6 月、7 月、8 月&lt;/h4&gt;
+
+&lt;p&gt;力尽きてきたようで、定例の #P4D と RubyMotion もくもく会、Yokohama.rb くらいしか活動していなかったらしいです。&lt;/p&gt;
+
+&lt;p&gt;あとフットサルやったり、箱根に旅行に行ったりしていました。&lt;/p&gt;
+
+&lt;h4&gt;9 月&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href="http://phpcon.php.gr.jp/w/2013/"&gt;PHPカンファレンス2013&lt;/a&gt; で &lt;a href="http://connpass.com/event/3326/"&gt;#P4D ワークショップ&lt;/a&gt;を開催させてもらいました。&lt;/p&gt;
+
+&lt;p&gt;ここで @ken&lt;em&gt;c&lt;/em&gt;lo さんに発表してもらった「生煮えぷるり」の話、とてもよかったですね。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://d.hatena.ne.jp/ken_c_lo/20130915/1379237062"&gt;Gitを使ったデザイナーとプログラマの協業について話してきた #P4D #phpcon2013&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;大阪、京都へ行ってきました。&lt;a href="http://connpass.com/event/3086/"&gt;[大阪] プログラマー向けデザイン勉強会&lt;/a&gt;参加が目的でしたが、ついでに寄った京都が非常に良かった。&lt;/p&gt;
+
+&lt;p&gt;この辺から、東京の外にももうちょっと出ないとなぁ。。。と思い始めたのでした。&lt;/p&gt;
+
+&lt;h4&gt;10 月&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href="http://blog.railsgirls.jp/post/65614128686/railsgirls-tokyo-3rd"&gt;RailsGirls Tokyo 3rd&lt;/a&gt; に出ていました。そうそうたるコーチ陣に混じって、なんとか頑張ってきました。&lt;/p&gt;
+
+&lt;h4&gt;11 月&lt;/h4&gt;
+
+&lt;p&gt;引っ越し関連で色々動いていたくらいで、あとは普通。&lt;/p&gt;
+
+&lt;h4&gt;12 月&lt;/h4&gt;
+
+&lt;p&gt;福井に行って、&lt;a href="http://wcaf.doorkeeper.jp/events/7028"&gt;WCAF Vol.11 「Design」&lt;/a&gt;で #P4D の活動を通じて感じたことなどをお話させていただきました。&lt;/p&gt;
+
+&lt;p&gt;カニよかった。カニ。&lt;/p&gt;
+
+&lt;h4&gt;総括&lt;/h4&gt;
+
+&lt;p&gt;昨年は前半でだいぶ力尽きたような感じはありますが、それでも一年を通じて RubyMotion と #P4D にきちんと貢献し続けることができたのではないでしょうか。&lt;/p&gt;
+
+&lt;p&gt;そういう意味では、抱負として挙げた「広げる」ことに関しては RubyMotion についても、#P4D を通じての エンジニア + デザイナのコラボレーションについては自分の身の回りから、全国に広める活動の一端を担えたのでは。&lt;/p&gt;
+
+&lt;h3&gt;2014 年に頑張ること&lt;/h3&gt;
+
+&lt;p&gt;そしてようやく今年の抱負。&lt;/p&gt;
+
+&lt;p&gt;あまりたくさん挙げてもつらいので、以下の 2 点だけにします。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;英語力の上昇&lt;/li&gt;
+&lt;li&gt;アウトプットを増やす&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;英語力の上昇&lt;/h4&gt;
+
+&lt;p&gt;特に会話ですね。聴くのと話すのをどうにかしたいと思っています。英会話スクールかなぁ。。&lt;/p&gt;
+
+&lt;h4&gt;アウトプットを増やす&lt;/h4&gt;
+
+&lt;p&gt;せっかくブログを middleman ベースに変更したので、書くペースを増やしたいです。あとは電子書籍か紙媒体の本に何かしら文章を書きたいと思っています。&lt;/p&gt;
+
+&lt;p&gt;日本語ばかりではなく、アプリもちゃんと作ってプログラマとしてアピールしていきたいです。&lt;/p&gt;
+
+&lt;p&gt;以上、疲れたので終わります。&lt;a href="https://www.pplog.net"&gt;ポエム&lt;/a&gt;案件っぽかった。&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Middleman blog に変えてみた</title>
     <link rel="alternate" href="http://blog.url.com/blog/2014/01/01/change-to-middleman-blog/"/>
@@ -580,89 +710,5 @@ Tasks: TOP =&amp;gt; default =&amp;gt; simulator
 
 &lt;p&gt;あとは &lt;a href="http://rubymotion.jp/RubyMotionDocumentation/articles/debugging/index.html"&gt;Debugging RubyMotion applications&lt;/a&gt; のページを参照していただいて、&lt;code&gt;debug&lt;/code&gt;オプションを使ってステップ実行したりするとより詳しくデバッグすることが出来ます。&lt;/p&gt;
 </content>
-  </entry>
-  <entry>
-    <title>DashDoc を入れてみた</title>
-    <link rel="alternate" href="http://blog.url.com/blog/2013/02/18/install-dashdoc/"/>
-    <id>http://blog.url.com/blog/2013/02/18/install-dashdoc/</id>
-    <published>2013-02-18T06:53:00Z</published>
-    <updated>2014-01-01T19:36:47+09:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;Dash を Sublime Text からワンタッチで引くことができる DashDoc というプラグインを入れてみた。&lt;/p&gt;
-
-&lt;p&gt;インストールはいつも通り Package Control からで OK。&lt;/p&gt;
-
-&lt;p&gt;デフォルトで ctrl+h が割り当てられてしまっていたので、変更した。&lt;br&gt;
-（この方法だと日本語入力時に不具合があります。追記をご参照ください。）&lt;/p&gt;
-
-&lt;p&gt;Preferences &amp;gt; Package Settings &amp;gt; DashDoc &amp;gt; Key Bindings - User&lt;/p&gt;
-&lt;pre class="highlight json"&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="w"&gt;
-  &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;keys&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;ctrl+h&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;command&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;left_delete&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;&lt;span class="w"&gt;
-  &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;keys&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;shift+command+h&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;command&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;dash_doc&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;&lt;span class="w"&gt;
-  &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;keys&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;ctrl+command+h&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;command&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;dash_doc&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
-                            &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;args&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;syntax_sensitive&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;true&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/pre&gt;
-&lt;hr&gt;
-
-&lt;p&gt;あと、RubyMotion のドキュメントを直で引きたかったので追加した。
-Preferences &amp;gt; Package Settings &amp;gt; DashDoc &amp;gt; Settings - User&lt;/p&gt;
-&lt;pre class="highlight json"&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
-  &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;syntax_sensitive&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
-  &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;syntax_docset_map&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
-  &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
-    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;ActionScript&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;actionscript&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
-    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;C&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;           &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;c&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
-    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;C++&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;cpp&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
-    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Clojure&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;     &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;clojure&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
-    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;CSS&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;css&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
-    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Erlang&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;erlang&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
-    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Groovy&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;groovy&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
-    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Haskell&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;     &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;haskell&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
-    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;HTML&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;html&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
-    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Java&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;java7&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
-    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;JavaScript&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;javascript&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
-    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Lisp&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;lisp&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
-    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Lua&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;lua&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
-    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Perl&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;perl&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
-    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;PHP&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;php&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
-    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Python&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;python2&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
-    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Rails&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;       &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;rails&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
-    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Ruby&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;ruby&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
-    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Scala&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;       &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;scala&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
-    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;ShellScript&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;manpages&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
-    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;SQL&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;psql&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
-    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;TCL&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;tcl&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
-    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;RubyMotion&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;rubymotion&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;
-  &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/pre&gt;
-&lt;p&gt;しばらく使ってみよう。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;2013-02-20 追記:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;left_delete&lt;/code&gt; を &lt;code&gt;ctrl+h&lt;/code&gt; に割り当てると、日本語の入力時におかしなことになってしまいました。具体的には、確定前の日本語を &lt;code&gt;ctrl+h&lt;/code&gt; で消したときに次の文字を入力すると復活してしまうという使いにくい状態になってしまいました。&lt;/p&gt;
-
-&lt;p&gt;結局、以下のようにしました&lt;/p&gt;
-
-&lt;p&gt;Preferences &amp;gt; Package Settings &amp;gt; DashDoc &amp;gt; Key Bindings - Default&lt;/p&gt;
-&lt;pre class="highlight json"&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;全部コメントアウト&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="w"&gt;
-  &lt;/span&gt;&lt;span class="err"&gt;//&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;keys&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;ctrl+h&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;command&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;dash_doc&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;&lt;span class="w"&gt;
-  &lt;/span&gt;&lt;span class="err"&gt;//&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;keys&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;ctrl+alt+h&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;command&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;dash_doc&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
-  &lt;/span&gt;&lt;span class="err"&gt;//&lt;/span&gt;&lt;span class="w"&gt;                           &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;args&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;syntax_sensitive&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;true&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/pre&gt;
-&lt;p&gt;Preferences &amp;gt; Package Settings &amp;gt; DashDoc &amp;gt; Key Bindings - User&lt;/p&gt;
-&lt;pre class="highlight json"&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="w"&gt;
-  &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;keys&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;shift+command+h&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;command&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;dash_doc&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;&lt;span class="w"&gt;
-  &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;keys&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;ctrl+command+h&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;command&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;dash_doc&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
-                            &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;args&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;syntax_sensitive&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;true&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/pre&gt;</content>
   </entry>
 </feed>

@@ -4,7 +4,7 @@
 <meta charset='utf-8'>
 <meta content='width=device-width, initial-scale=1.0' name='viewport'>
 <meta content='IE=edge;chrome=1' http-equiv='X-UA-Compatible'>
-<link href="../../stylesheets/application-21d6c0bf.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="../../stylesheets/application-a894f7b2.css" media="screen" rel="stylesheet" type="text/css" />
 <script async='async' charset='utf-8' src='http://b.st-hatena.com/js/bookmark_button.js' type='text/javascript'></script>
 <script>
   !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
@@ -49,6 +49,58 @@ satococoa's blog
 <li>Page: 7</li>
 </ul>
 </nav>
+<div class='article'>
+<div class='main'>
+<h2>
+<a href="/blog/2012/12/02/install-ruby-2-dot-0-0-preview2/">Ruby 2.0.0-preview2 をインストール</a>
+</h2>
+<p>普通に <code>rbenv install 2.0.0-preview2</code> したら openssl を require できなかったので以下の手順を行った。</p>
+
+<p>環境は</p>
+
+<ul>
+<li>Mac OS X 10.8.2 (10.7.xからのアップグレード)</li>
+<li>brew</li>
+<li>brew でインストールした rbenv, ruby-build を使用</li>
+<li>zsh</li>
+</ul><pre class="highlight text">$ brew install openssl
+$ vim .zshrc
+# 以下を追記
+export CONFIGURE_OPTS='--with-readline-dir=/usr/local/opt/readline --with-openssl-dir=/usr/local/opt/openssl' 
+$ rbenv install 2.0.0-preview2
+$ rbenv global 2.0.0-preview2
+$ ruby -ropen-uri -e 'p open("https://www.google.com/").read'
+OpenSSL::SSL::SSLError: SSL_connect returned=1 errno=0 state...</pre>
+<p class='continue'>
+<a href="/blog/2012/12/02/install-ruby-2-dot-0-0-preview2/">続きを読む &raquo;</a>
+</p>
+</div>
+<div class='meta'>
+<div class='published_at'>
+2012-12-02
+17:11
+</div>
+<ul class='tags'>
+<li>
+<a href="/blog/tags/ruby/">ruby</a>
+</li>
+</ul>
+<ul class='social'>
+<li class='hatena'>
+<a class='hatena-bookmark-button' data-hatena-bookmark-lang='ja' data-hatena-bookmark-layout='standard-balloon' data-hatena-bookmark-title='タイトル' href='http://b.hatena.ne.jp/entry/http://satococoa.github.io/blog/2012/12/02/install-ruby-2-dot-0-0-preview2/' title='このエントリーをはてなブックマークに追加'>
+<img alt='このエントリーをはてなブックマークに追加' height='20' src='http://b.st-hatena.com/images/entry-button/button-only@2x.png' style='border: none;' width='20'>
+</a>
+</li>
+<li class='twitter'>
+<a class='twitter-share-button' data-lang='en' data-url='http://satococoa.github.io/blog/2012/12/02/install-ruby-2-dot-0-0-preview2/' href='https://twitter.com/share'>Tweet</a>
+</li>
+<li class='facebook'>
+<div class='fb-like' data-action='like' data-href='http://satococoa.github.io/blog/2012/12/02/install-ruby-2-dot-0-0-preview2/' data-layout='button_count' data-share='false' data-show-faces='false'></div>
+</li>
+</ul>
+</div>
+</div>
+
 <div class='article'>
 <div class='main'>
 <h2>
@@ -156,55 +208,6 @@ $ pry
 </div>
 </div>
 
-<div class='article'>
-<div class='main'>
-<h2>
-<a href="/blog/2012/10/31/design4p-1st/">第一回プログラマ向けデザイン勉強会を開催しました</a>
-</h2>
-<p>10/27(土)に <a href="http://connpass.com/event/1185/">第一回プログラマ向けデザイン勉強会</a> を開催しました。</p>
-
-<p>この勉強会は毎月やっている <a href="https://www.facebook.com/groups/151208708350141/">デザイナー向けプログラム部 (P4D)</a> の逆バージョンで、デザイナさんにプログラマがデザインを教わるという趣旨で開催しました。<br>
-そして講師役として、いつもP4Dの方でもお世話になっている <a href="https://twitter.com/machida">@machida</a> さん、<a href="https://twitter.com/ken_c_lo">@ken<em>c</em>lo</a> さん、<a href="https://twitter.com/saucerjp">@saucerjp</a> さんの3人にお願いしました。<br>
-もっともこの3人をはじめ、P4Dに参加されているデザイナさんは普通にJSやFlash、ObjCなんか書いていたりして単にデザイナと呼んでいいのかどうかは怪しいところですが。</p>
-
-<h2>RailsエンジニアのためのTwitter Bootstrapカスタマイズ例</h2>
-
-<script async class="speakerdeck-embed" data-id="508e2052aee4d50002021f36" data-ratio="1.299492385786802" src="//speakerdeck.com/assets/embed.js"></script><p>まずは@machidaさんのTwitter Bootstrapのカスタマイズ例の話からでした。</p>
-
-<p>このテーマはP4D参加のプログラマからしきりにリクエストのあった「Twitter Bootstrapを使うとみんなTwitter Bootstrapっぽいサイトになってしまうから、カスタマイズ方法を教えて！ただし手間はかけたくない！！」というワガママな...</p>
-<p class='continue'>
-<a href="/blog/2012/10/31/design4p-1st/">続きを読む &raquo;</a>
-</p>
-</div>
-<div class='meta'>
-<div class='published_at'>
-2012-10-31
-01:04
-</div>
-<ul class='tags'>
-<li>
-<a href="/blog/tags/design/">design</a>
-</li>
-<li>
-<a href="/blog/tags/event/">event</a>
-</li>
-</ul>
-<ul class='social'>
-<li class='hatena'>
-<a class='hatena-bookmark-button' data-hatena-bookmark-lang='ja' data-hatena-bookmark-layout='standard-balloon' data-hatena-bookmark-title='タイトル' href='http://b.hatena.ne.jp/entry/http://satococoa.github.io/blog/2012/10/31/design4p-1st/' title='このエントリーをはてなブックマークに追加'>
-<img alt='このエントリーをはてなブックマークに追加' height='20' src='http://b.st-hatena.com/images/entry-button/button-only@2x.png' style='border: none;' width='20'>
-</a>
-</li>
-<li class='twitter'>
-<a class='twitter-share-button' data-lang='en' data-url='http://satococoa.github.io/blog/2012/10/31/design4p-1st/' href='https://twitter.com/share'>Tweet</a>
-</li>
-<li class='facebook'>
-<div class='fb-like' data-action='like' data-href='http://satococoa.github.io/blog/2012/10/31/design4p-1st/' data-layout='button_count' data-share='false' data-show-faces='false'></div>
-</li>
-</ul>
-</div>
-</div>
-
 
 <ul class='paginate'>
 <li><a href="/page/6/">&lt; 前のページ</a></li>
@@ -216,6 +219,9 @@ $ pry
 <div class='recent'>
 <h2>Recent Articles</h2>
 <ul>
+<li>
+<a href="/blog/2014/01/02/new-year-s-resolution-2014/">2014 年の抱負</a>
+</li>
 <li>
 <a href="/blog/2014/01/01/change-to-middleman-blog/">Middleman blog に変えてみた</a>
 </li>
@@ -243,9 +249,6 @@ $ pry
 <li>
 <a href="/blog/2013/02/11/tkrk10-3rd-day/">東京 Ruby 会議 10 3日目に参加しました</a>
 </li>
-<li>
-<a href="/blog/2013/02/05/qiita-2-day-hackathon/">Qiita 2-day Hackathon</a>
-</li>
 </ul>
 </div>
 <div class='tags'>
@@ -253,7 +256,7 @@ $ pry
 <ul>
 <li>
 <a href="/blog/tags/日記/">日記</a>
-(2)
+(3)
 </li>
 <li>
 <a href="/blog/tags/community/">community</a>
@@ -302,7 +305,7 @@ $ pry
 <ul>
 <li>
 <a href="/blog/2014/">2014</a>
-(1)
+(2)
 </li>
 <li>
 <a href="/blog/2013/">2013</a>
