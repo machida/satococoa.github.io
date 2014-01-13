@@ -5,10 +5,58 @@
   <id>http://blog.url.com/blog</id>
   <link href="http://blog.url.com/blog"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2014-01-02T07:12:50Z</updated>
+  <updated>2014-01-13T22:06:57Z</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>Yokohama.rb 40th</title>
+    <link rel="alternate" href="http://blog.url.com/blog/2014/01/14/yokohama-rb-40th/"/>
+    <id>http://blog.url.com/blog/2014/01/14/yokohama-rb-40th/</id>
+    <published>2014-01-13T22:06:57Z</published>
+    <updated>2014-01-14T07:18:42+09:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;a href="http://yokohamarb.doorkeeper.jp/events/7112"&gt;Yokohama.rb Monthly Meetup #40&lt;/a&gt; に参加してきました。&lt;/p&gt;
+
+&lt;p&gt;恒例の Ruby レシピブック読書会ですが、僕がレシピブックを持参していなかったのと、浮動小数点数の誤差の話とかあまり自分も明るくない部分の話だったのでちょこちょこ口を出しつつもあまり理解は進まなかったです。Float::EPSILON あたりの話をしていたようです。次はレシピブック持って行こう。&lt;/p&gt;
+
+&lt;p&gt;後半は &lt;a href="https://twitter.com/Nabetani"&gt;@Nabetani&lt;/a&gt; さんに準備していただいたペアプロ用の課題を、僕と &lt;a href="https://twitter.com/miyohide"&gt;@miyohide&lt;/a&gt; さんでプロジェクタと ust に晒しながら解くというちょっとした出し物を行いました。&lt;/p&gt;
+
+&lt;p&gt;問題はこちら -&gt; &lt;a href="http://nabetani.sakura.ne.jp/yokohamarb/2014.01.cosvon/"&gt;CoSVON 〜 Yokohama.rb #40 2014.1.11&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;久しぶりのペアプロでしたが、比較的順調に TDD っぽく開発を進められたし gem の作り方とかその辺も未経験の方にとってはきっと役に立つ内容だったのでは、と思います。&lt;/p&gt;
+
+&lt;p&gt;いつもの懇親会は、翌日も朝早い予定があったので無理せずお休みしました。&lt;/p&gt;
+
+&lt;p&gt;今回も楽しい会でした。定期的に新しい人も参加しているし、とても良いと思います。&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>第35回 デザイナー向けプログラム部</title>
+    <link rel="alternate" href="http://blog.url.com/blog/2014/01/14/p4d-35th/"/>
+    <id>http://blog.url.com/blog/2014/01/14/p4d-35th/</id>
+    <published>2014-01-13T21:58:24Z</published>
+    <updated>2014-01-14T07:19:04+09:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;a href="http://connpass.com/event/4624/"&gt;第35回 デザイナー向けプログラム部 #p4d at 万葉&lt;/a&gt; を開催しました。&lt;/p&gt;
+
+&lt;p&gt;P4D では、しばらくデザイナとエンジニアをペアにしてマンツーマンで何かを進める (たいていエンジニアがデザイナに何かを教えるとか) という形式でやってきましたが、昨年末最後の P4D からはペアにはせずに基本はもくもく会として進めています。&lt;/p&gt;
+
+&lt;p&gt;エンジニアも作業を進められるし、やっぱり「随時、困ったら人に聞ける環境で作業をする」ということがこういう成果物を出していきたいコミュニティとしては一番シンプルな運営の仕方なのかなぁと思っています。&lt;/p&gt;
+
+&lt;p&gt;反面、あまりにみんながもくもくとやりすぎてしまうと、参加歴の浅い人は特に人に話しかけにくくなって、相談もしにくくなってしまいます。&lt;/p&gt;
+
+&lt;p&gt;バランスを見ながら適当に話しかけたり、話題を振ったり、という気配りが必要そう。(特に今回は初参加の方が半数だったので。)&lt;/p&gt;
+
+&lt;p&gt;実際に各自がやったことと、KPT は wiki に。 -&gt; &lt;a href="https://github.com/prog4designer/meetups/wiki/第35回"&gt;第35回&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;次回は 1/23(木) に forkwell さんで開催します。(募集ページは今週中に立てます。)&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>2014 年の抱負</title>
     <link rel="alternate" href="http://blog.url.com/blog/2014/01/02/new-year-s-resolution-2014/"/>
@@ -579,136 +627,6 @@ Rails エンジニア。&lt;a href="http://d.hatena.ne.jp/hamakn/20130217"&gt;�
 &lt;p&gt;それぞれのコミュニティですごい人がたくさんいるのですが、失礼ながらとりあえずパッと頭に浮かんだ人だけ書かせていただきました。&lt;/p&gt;
 
 &lt;p&gt;では、またどこかのコミュニティでお会いしましょう！&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>RubyFriendsCamera has been released!</title>
-    <link rel="alternate" href="http://blog.url.com/blog/2013/02/25/rubyfriendscamera/"/>
-    <id>http://blog.url.com/blog/2013/02/25/rubyfriendscamera/</id>
-    <published>2013-02-25T09:54:00Z</published>
-    <updated>2013-12-20T21:37:21+09:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;Today I released RubyFriendsCamera and now available on &lt;a href="https://itunes.apple.com/jp/app/ruby-friends-camera/id602073192?mt=8"&gt;AppStore&lt;/a&gt;!&lt;/p&gt;
-
-&lt;p&gt;This application is a client app for &lt;a href="http://rubyfriends.com"&gt;#RubyFriends&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Using RubyFriendsCamera, you can easily share your photos to twitter with #RubyFriends hashtag.&lt;/p&gt;
-
-&lt;p&gt;RubyFriendsCamera is developed with &lt;a href="http://www.rubymotion.com"&gt;RubyMotion&lt;/a&gt; and &lt;a href="http://www.pixate.com"&gt;Pixate&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;I&amp;#39;d like to say thank you to &lt;a href="https://twitter.com/ken_c_lo"&gt;@ken&lt;em&gt;c&lt;/em&gt;lo&lt;/a&gt; and &lt;a href="https://twitter.com/machida"&gt;@machida&lt;/a&gt;.
-They created a great application icon, splash screen, toolbar icons, background images.&lt;/p&gt;
-
-&lt;p&gt;Source code is available here.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/satococoa/RubyFriendsCamera"&gt;https://github.com/satococoa/RubyFriendsCamera&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Enjoy!&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;RubyFriendsCamera というアプリケーションをリリースしました。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://itunes.apple.com/jp/app/ruby-friends-camera/id602073192?mt=8"&gt;AppStore&lt;/a&gt; からインストールできます。&lt;/p&gt;
-
-&lt;p&gt;このアプリは &lt;a href="http://rubyfriends.com"&gt;#RubyFriends&lt;/a&gt; のクライアントアプリです。&lt;/p&gt;
-
-&lt;p&gt;RubyFriendsCamera を使うと簡単に #RubyFriendsCamera ハッシュタグをつけて twitter に写真を UP することができます。&lt;/p&gt;
-
-&lt;p&gt;RubyFriendsCamera は &lt;a href="http://www.rubymotion.com"&gt;RubyMotion&lt;/a&gt; と &lt;a href="http://www.pixate.com"&gt;Pixate&lt;/a&gt; を使って開発しています。&lt;/p&gt;
-
-&lt;p&gt;突然の依頼にもかかわらず、アイコンや画像などを作っていただいた &lt;a href="https://twitter.com/ken_c_lo"&gt;@ken&lt;em&gt;c&lt;/em&gt;lo&lt;/a&gt; さんと &lt;a href="https://twitter.com/machida"&gt;@machida&lt;/a&gt; さん、本当にありがとうございました。&lt;/p&gt;
-
-&lt;p&gt;ソースコードも公開されています。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/satococoa/RubyFriendsCamera"&gt;https://github.com/satococoa/RubyFriendsCamera&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;たくさんの方に楽しんでいただけると嬉しいです。
-(ところで、どなたかAndroid 版作りませんか？仕様や画像など、必要でしたらシェアします。)&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>RubyMotion のデバッグで NSZombieEnabled を使う</title>
-    <link rel="alternate" href="http://blog.url.com/blog/2013/02/20/debugging-rubymotion-using-nszombieenabled/"/>
-    <id>http://blog.url.com/blog/2013/02/20/debugging-rubymotion-using-nszombieenabled/</id>
-    <published>2013-02-20T10:17:00Z</published>
-    <updated>2014-01-01T19:34:06+09:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;RubyMotion でアプリをつくるとき、デバッグがやはり大変です。&lt;/p&gt;
-
-&lt;p&gt;例えば GCD など非同期で実行されるブロック内で参照されるオブジェクトをインスタンス変数に入れていない場合、実際にそのブロックの処理が実行されるときには既にそのオブジェクトが解放されてしまっているというケースがあります。&lt;br&gt;
-これが RubyMotion を使う上での一番厄介なハマりどころといえると思います。&lt;/p&gt;
-
-&lt;p&gt;そのケースにハマった場合、何も有用なログを残さずにすとんと落ちてしまうことがありとても萎えます。&lt;/p&gt;
-
-&lt;p&gt;例えば以下の例はあまりに単純すぎますが、当然アプリがすとんと落ちます。&lt;/p&gt;
-&lt;pre class="highlight ruby"&gt;&lt;span class="c1"&gt;# app_delegate.rb&lt;/span&gt;
-&lt;span class="k"&gt;class &lt;/span&gt;&lt;span class="nc"&gt;AppDelegate&lt;/span&gt;
-  &lt;span class="k"&gt;def &lt;/span&gt;&lt;span class="nf"&gt;application&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;application&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;didFinishLaunchingWithOptions&lt;/span&gt;&lt;span class="ss"&gt;:launchOptions&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;main&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;MainController&lt;/span&gt;&lt;span class="nf"&gt;.new&lt;/span&gt;
-    &lt;span class="vi"&gt;@window&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;UIWindow&lt;/span&gt;&lt;span class="nf"&gt;.alloc.initWithFrame&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="no"&gt;UIScreen&lt;/span&gt;&lt;span class="nf"&gt;.mainScreen.bounds&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="vi"&gt;@window&lt;/span&gt;&lt;span class="nf"&gt;.rootViewController&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;main&lt;/span&gt;
-    &lt;span class="vi"&gt;@window&lt;/span&gt;&lt;span class="nf"&gt;.makeKeyAndVisible&lt;/span&gt;
-    &lt;span class="kp"&gt;true&lt;/span&gt;
-  &lt;span class="k"&gt;end&lt;/span&gt;
-&lt;span class="k"&gt;end&lt;/span&gt;
-
-&lt;span class="c1"&gt;# main_controller.rb&lt;/span&gt;
-&lt;span class="k"&gt;class &lt;/span&gt;&lt;span class="nc"&gt;MainController&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="no"&gt;UIViewController&lt;/span&gt;
-  &lt;span class="k"&gt;def &lt;/span&gt;&lt;span class="nf"&gt;viewDidLoad&lt;/span&gt;
-    &lt;span class="k"&gt;super&lt;/span&gt;
-    &lt;span class="n"&gt;label&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;UILabel&lt;/span&gt;&lt;span class="nf"&gt;.new.tap&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
-      &lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="nf"&gt;.frame&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="o"&gt;[[&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;30&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;300&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;60&lt;/span&gt;&lt;span class="o"&gt;]]&lt;/span&gt;
-      &lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="nf"&gt;.text&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;hoge&amp;#39;&lt;/span&gt;
-    &lt;span class="k"&gt;end&lt;/span&gt;
-    &lt;span class="n"&gt;label&lt;/span&gt;&lt;span class="nf"&gt;.release&lt;/span&gt; &lt;span class="c1"&gt;# アプリを落とすために意図的に入れてます。&lt;/span&gt;
-    &lt;span class="n"&gt;view&lt;/span&gt;&lt;span class="nf"&gt;.addSubview&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;label&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-  &lt;span class="k"&gt;end&lt;/span&gt;
-&lt;span class="k"&gt;end&lt;/span&gt;
-&lt;/pre&gt;
-&lt;p&gt;実行するとこうなります。&lt;/p&gt;
-&lt;pre class="highlight text"&gt;$ rake
-     Build ./build/iPhoneSimulator-6.1-Development
-   Compile ./app/main_controller.rb
-      Link ./build/iPhoneSimulator-6.1-Development/DebugDemo.app/DebugDemo
-    Create ./build/iPhoneSimulator-6.1-Development/DebugDemo.dSYM
-  Simulate ./build/iPhoneSimulator-6.1-Development/DebugDemo.app
-((null))&amp;gt; *** simulator session ended with error: Error Domain=DTiPhoneSimulatorErrorDomain Code=1 &amp;quot;シミュレートした App は終了しました。&amp;quot; UserInfo=0x10014db60 {NSLocalizedDescription=シミュレートした App は終了しました。, DTiPhoneSimulatorUnderlyingErrorCodeKey=-1}
-rake aborted!
-Command failed with status (1): [DYLD_FRAMEWORK_PATH=&amp;quot;/Applications/Xcode.a...]
-/Library/RubyMotion/lib/motion/project.rb:101:in `block in &amp;lt;top (required)&amp;gt;&amp;#39;
-Tasks: TOP =&amp;gt; default =&amp;gt; simulator
-(See full trace by running task with --trace)
-&lt;/pre&gt;
-&lt;p&gt;このとき、少なくともどのオブジェクト（どのクラスのインスタンス）にアクセスしようとして落ちたのかがわかるだけでもデバッグの助けになります。&lt;/p&gt;
-
-&lt;p&gt;以下のように &lt;code&gt;NSZombieEnabled=YES&lt;/code&gt; という環境変数をつけるとその情報を出すことが出来ます。&lt;/p&gt;
-&lt;pre class="highlight text"&gt;$ NSZombieEnabled=YES rake
-     Build ./build/iPhoneSimulator-6.1-Development
-  Simulate ./build/iPhoneSimulator-6.1-Development/DebugDemo.app
-2013-02-20 20:38:53.449 DebugDemo[21494:c07] *** -[UILabel superview]: message sent to deallocated instance 0xf1c9f40
-(main)&amp;gt; *** simulator session ended with error: Error Domain=DTiPhoneSimulatorErrorDomain Code=1 &amp;quot;シミュレートした App  は終了しました。&amp;quot; UserInfo=0x102252cc0 {NSLocalizedDescription=シミュレートした App は終了しました。, DTiPhoneSimulatorUnderlyingErrorCodeKey=-1}
-rake aborted!
-Command failed with status (1): [DYLD_FRAMEWORK_PATH=&amp;quot;/Applications/Xcode.a...]
-/Library/RubyMotion/lib/motion/project.rb:101:in `block in &amp;lt;top (required)&amp;gt;&amp;#39;
-Tasks: TOP =&amp;gt; default =&amp;gt; simulator
-(See full trace by running task with --trace)
-&lt;/pre&gt;&lt;pre class="highlight text"&gt;2013-02-20 20:38:53.449 DebugDemo[21494:c07] *** -[UILabel superview]: message sent to deallocated instance 0xf1c9f40
-&lt;/pre&gt;
-&lt;p&gt;って出ていますよね？これで、UILabelクラスのインスタンスが原因であることがわかります。&lt;/p&gt;
-
-&lt;p&gt;NSZombieEnabled については &lt;a href="http://cocoadev.com/wiki/NSZombie"&gt;NSZombieEnabled - CocoaDev&lt;/a&gt; がわかりやすいです。&lt;br&gt;
-ざっくり説明すると、解放されたオブジェクトのクラスを動的に &lt;code&gt;_NSZombie&lt;/code&gt; に変更し、そのメモリ領域を解放させないようにしているおかげで上記のような情報をログに出してくれているようです。&lt;/p&gt;
-
-&lt;p&gt;あとは &lt;a href="http://rubymotion.jp/RubyMotionDocumentation/articles/debugging/index.html"&gt;Debugging RubyMotion applications&lt;/a&gt; のページを参照していただいて、&lt;code&gt;debug&lt;/code&gt;オプションを使ってステップ実行したりするとより詳しくデバッグすることが出来ます。&lt;/p&gt;
 </content>
   </entry>
 </feed>

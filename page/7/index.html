@@ -52,6 +52,122 @@ satococoa's blog
 <div class='article'>
 <div class='main'>
 <h2>
+<a href="/blog/2012/12/17/use-nimbus-css-with-rubymotion/">RubyMotion で Nimbus CSS を使ってみる</a>
+</h2>
+<p>この記事は <a href="http://www.adventar.org/calendars/18">RubyMotion Advent Calendar 2012</a> の17日目の記事です。</p>
+
+<h2>Nimbus?</h2>
+
+<p>最近 <a href="http://fladdict.net/blog/2012/12/nimbus-kit.html">新Google Mapsアプリ採用のフレームワーク NimbusKit がいい感じ</a> で話題になった <a href="http://nimbuskit.info">NimbusKit</a> というフレームワークに興味を持ってちらっと調べてみたのですが、なんと CSS でアプリの View の定義ができるらしいということがわかりました。</p>
+
+<p>しかも、CSS を変更するとリアルタイムにその変更が反映されるそうじゃないですか！</p>
+
+<p>デモ動画はこちらです。</p>
+
+<iframe width="560" height="315" src="http://www.youtube.com/embed/i_5LbQ8e9BU" frameborder="0" allowfullscreen></iframe>
+
+<p>さっそく、RubyMotion からも使えるか、試してみました。</p>
+
+<h2>インストール</h2>
+
+<p>普通に motion-cocoapods でインストールできます。
+Rakefile にこんな感じに書いて、いつも通り<code>$ rake</code>でOKです。</p>
+<pre class="highlight ruby"><span class="n">app</span><span class="nf">.pods</span> <span class="k">do</span>
+  <span class="n">pod</span> <span class="s1">'Nimbus'</span>
+<span class="k">end</span>
+</pre>
+<h2>コード</h2>
+
+<p>Nimbus CSS 関連のコードだけ貼ります。基本的には公式のドキュメントの <a href="http://docs.nimbuskit.info/NimbusCSS.html">Nimbus: Nimbus CSS</a> にある "Recommended Procedure for Storing...</p>
+<p class='continue'>
+<a href="/blog/2012/12/17/use-nimbus-css-with-rubymotion/">続きを読む &raquo;</a>
+</p>
+</div>
+<div class='meta'>
+<div class='published_at'>
+2012-12-17
+20:50
+</div>
+<ul class='tags'>
+<li>
+<a href="/blog/tags/rubymotion/">rubymotion</a>
+</li>
+</ul>
+<ul class='social'>
+<li class='hatena'>
+<a class='hatena-bookmark-button' data-hatena-bookmark-lang='ja' data-hatena-bookmark-layout='standard-balloon' data-hatena-bookmark-title='タイトル' href='http://b.hatena.ne.jp/entry/http://satococoa.github.io/blog/2012/12/17/use-nimbus-css-with-rubymotion/' title='このエントリーをはてなブックマークに追加'>
+<img alt='このエントリーをはてなブックマークに追加' height='20' src='http://b.st-hatena.com/images/entry-button/button-only@2x.png' style='border: none;' width='20'>
+</a>
+</li>
+<li class='twitter'>
+<a class='twitter-share-button' data-lang='en' data-url='http://satococoa.github.io/blog/2012/12/17/use-nimbus-css-with-rubymotion/' href='https://twitter.com/share'>Tweet</a>
+</li>
+<li class='facebook'>
+<div class='fb-like' data-action='like' data-href='http://satococoa.github.io/blog/2012/12/17/use-nimbus-css-with-rubymotion/' data-layout='button_count' data-share='false' data-show-faces='false'></div>
+</li>
+</ul>
+</div>
+</div>
+
+<div class='article'>
+<div class='main'>
+<h2>
+<a href="/blog/2012/12/08/rubymotion-tips/">RubyMotion の小ワザ</a>
+</h2>
+<p>この記事は <a href="http://www.adventar.org/calendars/18">RubyMotion Advent Calendar 2012</a> の8日目の記事です。</p>
+
+<p>実際に RubyMotion を使って開発する上で、知っておくとちょっと便利かもしれない小ワザを並べてみます。</p>
+
+<h2>複数の iOS 機器をつないでいるときにデプロイする機器を指定する</h2>
+
+<p>仕事で iOS アプリの開発をしていると、Mac に複数の機器をつないでいることもしばしばあります。そういうときに <code>rake device</code> する際、<code>id</code>パラメータを指定するとでプロイする機器を選択することができます。</p>
+<pre class="highlight text">$ rake device id=hogehoge
+</pre>
+<p>この際に使うidというのは Identifier のことで Xcode の Organizer で調べることができます。</p>
+
+<p><img alt="Xcode organizer" src="../../../../../images/201212/identifier-in-organizer-bef65f4b.png"></p>
+
+<h2>設定を yaml ファイルにまとめる</h2>
+
+<p>複数のアプリの開発をしていると、毎回 Rakefile に testflight の token を書くのは面倒ですし、Rakefile がごちゃっとしますよね。</p>
+
+<p>僕は yaml にそういった設定情報を書くようにしています。</p>
+
+<p>yaml ファイルはこんな感じ。</p>
+<pre class="highlight yaml"><span class="s">testflight</span></pre>
+<p class='continue'>
+<a href="/blog/2012/12/08/rubymotion-tips/">続きを読む &raquo;</a>
+</p>
+</div>
+<div class='meta'>
+<div class='published_at'>
+2012-12-08
+19:30
+</div>
+<ul class='tags'>
+<li>
+<a href="/blog/tags/rubymotion/">rubymotion</a>
+</li>
+</ul>
+<ul class='social'>
+<li class='hatena'>
+<a class='hatena-bookmark-button' data-hatena-bookmark-lang='ja' data-hatena-bookmark-layout='standard-balloon' data-hatena-bookmark-title='タイトル' href='http://b.hatena.ne.jp/entry/http://satococoa.github.io/blog/2012/12/08/rubymotion-tips/' title='このエントリーをはてなブックマークに追加'>
+<img alt='このエントリーをはてなブックマークに追加' height='20' src='http://b.st-hatena.com/images/entry-button/button-only@2x.png' style='border: none;' width='20'>
+</a>
+</li>
+<li class='twitter'>
+<a class='twitter-share-button' data-lang='en' data-url='http://satococoa.github.io/blog/2012/12/08/rubymotion-tips/' href='https://twitter.com/share'>Tweet</a>
+</li>
+<li class='facebook'>
+<div class='fb-like' data-action='like' data-href='http://satococoa.github.io/blog/2012/12/08/rubymotion-tips/' data-layout='button_count' data-share='false' data-show-faces='false'></div>
+</li>
+</ul>
+</div>
+</div>
+
+<div class='article'>
+<div class='main'>
+<h2>
 <a href="/blog/2012/12/02/install-ruby-2-dot-0-0-preview2/">Ruby 2.0.0-preview2 をインストール</a>
 </h2>
 <p>普通に <code>rbenv install 2.0.0-preview2</code> したら openssl を require できなかったので以下の手順を行った。</p>
@@ -101,113 +217,6 @@ OpenSSL::SSL::SSLError: SSL_connect returned=1 errno=0 state...</pre>
 </div>
 </div>
 
-<div class='article'>
-<div class='main'>
-<h2>
-<a href="/blog/2012/12/01/rubymotion-first-step/">RubyMotion のはじめの一歩</a>
-</h2>
-<p>この記事は <a href="http://www.adventar.org/calendars/18">RubyMotion Advent Calendar 2012</a> の一日目の記事です。</p>
-
-<p>RubyMotion を買ってみたけれどもまだ具体的なアプリ作りまでは進んでいない方向けに、RubyMotion で手っ取り早くアプリ開発を始める手順をまとめてみます。</p>
-
-<h2>API リファレンスを準備する</h2>
-
-<p>RubyMotion での開発は <a href="https://developer.apple.com/jp/technologies/ios/cocoa-touch.html">Cocoa Touch</a> フレームワークを直接使いますので、Cocoa Touch の API リファレンスを常に引けるようにしておいて下さい。</p>
-
-<p><a href="http://www.rubymotion.com/developer-center/api/index.html">RubyMotion API Reference</a> を見るか、iOS アプリの開発を既に経験されている方は Cocoa Touch のドキュメントを見るのが良いと思います。</p>
-
-<p>RubyMotion 勉強会や RubyMotion もくもく会などで聞いてみたところ、<a href="https://itunes.apple.com/jp/app/dash-docs-snippets/id458034879?mt=12">Dash</a> を使っている人が大多数でした。</p>
-
-<p>Dash用の <a href="http://rubymotion.com/files/RubyMotion.docset.zip">RubyMotion Docset</a> も最近公開されました。（ファイルへの直リンクになっています。）</p>
-
-<h2>チュートリアル</h2>
-
-<p>手前味噌ですが、僕が以前 Rubyist Magazine に書かせ...</p>
-<p class='continue'>
-<a href="/blog/2012/12/01/rubymotion-first-step/">続きを読む &raquo;</a>
-</p>
-</div>
-<div class='meta'>
-<div class='published_at'>
-2012-12-01
-01:07
-</div>
-<ul class='tags'>
-<li>
-<a href="/blog/tags/rubymotion/">rubymotion</a>
-</li>
-</ul>
-<ul class='social'>
-<li class='hatena'>
-<a class='hatena-bookmark-button' data-hatena-bookmark-lang='ja' data-hatena-bookmark-layout='standard-balloon' data-hatena-bookmark-title='タイトル' href='http://b.hatena.ne.jp/entry/http://satococoa.github.io/blog/2012/12/01/rubymotion-first-step/' title='このエントリーをはてなブックマークに追加'>
-<img alt='このエントリーをはてなブックマークに追加' height='20' src='http://b.st-hatena.com/images/entry-button/button-only@2x.png' style='border: none;' width='20'>
-</a>
-</li>
-<li class='twitter'>
-<a class='twitter-share-button' data-lang='en' data-url='http://satococoa.github.io/blog/2012/12/01/rubymotion-first-step/' href='https://twitter.com/share'>Tweet</a>
-</li>
-<li class='facebook'>
-<div class='fb-like' data-action='like' data-href='http://satococoa.github.io/blog/2012/12/01/rubymotion-first-step/' data-layout='button_count' data-share='false' data-show-faces='false'></div>
-</li>
-</ul>
-</div>
-</div>
-
-<div class='article'>
-<div class='main'>
-<h2>
-<a href="/blog/2012/11/06/use-google-reader-api-with-ruby/">RubyでGoogleReaderAPIにアクセスする</a>
-</h2>
-<h2>やりたかったこと</h2>
-
-<p>あるサイトの過去記事を全部RDF or Atomで取得したかった。</p>
-
-<h2>手順</h2>
-
-<p><a href="https://github.com/nudded/GoogleReaderAPI">GoogleReaderApi</a> っていうgemがあったので使ってみた。</p>
-
-<p>実際はBundler使ってプロジェクト以下にインストールしたりしているが省略。</p>
-
-<p>パラメータとかエンドポイントはぐぐったら非公式のドキュメントが出てきたのでそちらを参照。</p>
-
-<p><a href="http://code.google.com/p/pyrfeed/wiki/GoogleReaderAPI">http://code.google.com/p/pyrfeed/wiki/GoogleReaderAPI</a></p>
-<pre class="highlight text">$ gem install GoogleReaderApi
-$ pry
-&gt; require 'google_reader_api'
-&gt; api = GoogleReaderApi::Api.new {:email =&gt; 'example@gmail.com', :password =&gt; 'password'}
-&gt; api.get_link('atom/feed/http://example.com/feed.rdf', {n:10, r:'o', ot:Date.parse('2012-11-01').to_time.to_i})
-</pre>
-
-<p class='continue'>
-<a href="/blog/2012/11/06/use-google-reader-api-with-ruby/">続きを読む &raquo;</a>
-</p>
-</div>
-<div class='meta'>
-<div class='published_at'>
-2012-11-06
-22:37
-</div>
-<ul class='tags'>
-<li>
-<a href="/blog/tags/ruby/">ruby</a>
-</li>
-</ul>
-<ul class='social'>
-<li class='hatena'>
-<a class='hatena-bookmark-button' data-hatena-bookmark-lang='ja' data-hatena-bookmark-layout='standard-balloon' data-hatena-bookmark-title='タイトル' href='http://b.hatena.ne.jp/entry/http://satococoa.github.io/blog/2012/11/06/use-google-reader-api-with-ruby/' title='このエントリーをはてなブックマークに追加'>
-<img alt='このエントリーをはてなブックマークに追加' height='20' src='http://b.st-hatena.com/images/entry-button/button-only@2x.png' style='border: none;' width='20'>
-</a>
-</li>
-<li class='twitter'>
-<a class='twitter-share-button' data-lang='en' data-url='http://satococoa.github.io/blog/2012/11/06/use-google-reader-api-with-ruby/' href='https://twitter.com/share'>Tweet</a>
-</li>
-<li class='facebook'>
-<div class='fb-like' data-action='like' data-href='http://satococoa.github.io/blog/2012/11/06/use-google-reader-api-with-ruby/' data-layout='button_count' data-share='false' data-show-faces='false'></div>
-</li>
-</ul>
-</div>
-</div>
-
 
 <ul class='paginate'>
 <li><a href="/page/6/">&lt; 前のページ</a></li>
@@ -219,6 +228,12 @@ $ pry
 <div class='recent'>
 <h2>Recent Articles</h2>
 <ul>
+<li>
+<a href="/blog/2014/01/14/yokohama-rb-40th/">Yokohama.rb 40th</a>
+</li>
+<li>
+<a href="/blog/2014/01/14/p4d-35th/">第35回 デザイナー向けプログラム部</a>
+</li>
 <li>
 <a href="/blog/2014/01/02/new-year-s-resolution-2014/">2014 年の抱負</a>
 </li>
@@ -243,12 +258,6 @@ $ pry
 <li>
 <a href="/blog/2013/02/17/rails-girls-more-4th/">第4回 Rails Girls, More 勉強会</a>
 </li>
-<li>
-<a href="/blog/2013/02/13/mysql-max-allowed-packet/">MySQL の max_allowed_packet を設定</a>
-</li>
-<li>
-<a href="/blog/2013/02/11/tkrk10-3rd-day/">東京 Ruby 会議 10 3日目に参加しました</a>
-</li>
 </ul>
 </div>
 <div class='tags'>
@@ -264,7 +273,7 @@ $ pry
 </li>
 <li>
 <a href="/blog/tags/event/">event</a>
-(12)
+(14)
 </li>
 <li>
 <a href="/blog/tags/rubymotion/">rubymotion</a>
@@ -298,6 +307,14 @@ $ pry
 <a href="/blog/tags/middleman/">middleman</a>
 (1)
 </li>
+<li>
+<a href="/blog/tags/p4d/">p4d</a>
+(1)
+</li>
+<li>
+<a href="/blog/tags/yokohama-rb/">Yokohama.rb</a>
+(1)
+</li>
 </ul>
 </div>
 <div class='by_year'>
@@ -305,7 +322,7 @@ $ pry
 <ul>
 <li>
 <a href="/blog/2014/">2014</a>
-(2)
+(4)
 </li>
 <li>
 <a href="/blog/2013/">2013</a>
